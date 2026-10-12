@@ -1,0 +1,239 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carlinetycoon.github.io/schemas/model.schema.json",
+  "title": "Car Line Tycoon car model (.clt-model.json)",
+  "description": "A car model from the design studio: parts, colours, colour schemes and option packages. The game works out everything else from its own catalogue.",
+  "type": "object",
+  "properties": {
+    "format": {
+      "description": "The kind of file. Always this value.",
+      "const": "car-line-tycoon.model"
+    },
+    "formatVersion": {
+      "description": "The version of the format. The game reads version 1 and refuses a newer one.",
+      "type": "integer",
+      "const": 1
+    },
+    "gameVersion": {
+      "description": "The game version that wrote the file. Informative only.",
+      "type": "string"
+    },
+    "id": {
+      "description": "The file's id.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]{2,40}$"
+    },
+    "name": {
+      "description": "The model's name, as the studio shows it.",
+      "type": "string"
+    },
+    "parts": {
+      "description": "The car's parts, one per category.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "category": {
+            "description": "The part's category (\"body\", \"wheels\", ...).",
+            "type": "string",
+            "enum": [
+              "body",
+              "bonnet",
+              "bumper_front",
+              "bumper_rear",
+              "chassis",
+              "wheels",
+              "hoverpads",
+              "fenders_front",
+              "fenders_rear",
+              "fenders_step",
+              "motor",
+              "exhaust",
+              "carb",
+              "roof",
+              "spare",
+              "doors",
+              "side_mounts",
+              "turret",
+              "weapon"
+            ]
+          },
+          "part": {
+            "description": "The part's id in the game's catalogue. Export a model from the game to see real ids.",
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "category",
+          "part"
+        ],
+        "description": "One part of the car."
+      },
+      "minItems": 1
+    },
+    "colors": {
+      "description": "The default colours, at most one per channel.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "channel": {
+            "description": "The colour channel.",
+            "type": "string",
+            "enum": [
+              "body",
+              "roof",
+              "interior",
+              "trim",
+              "chassis",
+              "wheels",
+              "powertrain"
+            ]
+          },
+          "value": {
+            "description": "The colour as #RRGGBB or #RRGGBBAA.",
+            "type": "string",
+            "pattern": "^#([0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$"
+          },
+          "finish": {
+            "description": "The paint finish as a number: 0 normal, 1 metallic, 2 matte, 3 pearl, 4 flake, 5 chrome. Leave it out for normal paint. Only body, roof, trim and wheels take a finish other than normal.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 5
+          }
+        },
+        "required": [
+          "channel",
+          "value"
+        ],
+        "description": "One colour."
+      }
+    },
+    "schemes": {
+      "description": "The colour schemes of the model. The first one, id \"default\", repeats the default colours.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The scheme's id inside the model.",
+            "type": "string"
+          },
+          "name": {
+            "description": "The scheme's name.",
+            "type": "string"
+          },
+          "colors": {
+            "description": "The scheme's colours.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "channel": {
+                  "description": "The colour channel.",
+                  "type": "string",
+                  "enum": [
+                    "body",
+                    "roof",
+                    "interior",
+                    "trim",
+                    "chassis",
+                    "wheels",
+                    "powertrain"
+                  ]
+                },
+                "value": {
+                  "description": "The colour as #RRGGBB or #RRGGBBAA.",
+                  "type": "string",
+                  "pattern": "^#([0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$"
+                },
+                "finish": {
+                  "description": "The paint finish as a number: 0 normal, 1 metallic, 2 matte, 3 pearl, 4 flake, 5 chrome. Leave it out for normal paint. Only body, roof, trim and wheels take a finish other than normal.",
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 5
+                }
+              },
+              "required": [
+                "channel",
+                "value"
+              ],
+              "description": "One colour."
+            }
+          }
+        },
+        "required": [
+          "colors"
+        ]
+      }
+    },
+    "packages": {
+      "description": "Option packages (engine, armour, armament).",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The package's id.",
+            "type": "string",
+            "minLength": 1
+          },
+          "version": {
+            "description": "The package's version.",
+            "type": "integer",
+            "minimum": 1
+          },
+          "kind": {
+            "description": "The kind of package as a number: 0 engine, 1 armor, 2 armament.",
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 2
+          },
+          "parts": {
+            "description": "The package's parts.",
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "category": {
+                  "description": "The part's category (\"body\", \"wheels\", ...).",
+                  "type": "string"
+                },
+                "part": {
+                  "description": "The part's id in the game's catalogue. Export a model from the game to see real ids.",
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "category",
+                "part"
+              ],
+              "description": "A part the package adds or swaps."
+            }
+          },
+          "removals": {
+            "description": "The categories the package removes.",
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "required": [
+          "id",
+          "version",
+          "kind",
+          "parts"
+        ]
+      }
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "parts"
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carlinetycoon.github.io/schemas/language.schema.json",
+  "title": "Car Line Tycoon language (.clt-lang.json)",
+  "description": "A language: its code, its name and texts by key. A key the file leaves out shows the English text.",
+  "type": "object",
+  "properties": {
+    "format": {
+      "description": "The kind of file. Always this value.",
+      "const": "car-line-tycoon.language"
+    },
+    "formatVersion": {
+      "description": "The version of the format. The game reads version 1 and refuses a newer one.",
+      "type": "integer",
+      "const": 1
+    },
+    "gameVersion": {
+      "description": "The game version that wrote the file. Informative only.",
+      "type": "string"
+    },
+    "code": {
+      "description": "The language tag, as \"pt-BR\" or \"ru\".",
+      "type": "string",
+      "pattern": "^[A-Za-z0-9-]{2,12}$"
+    },
+    "name": {
+      "description": "The language's own name, shown in the language list.",
+      "type": "string",
+      "minLength": 1,
+      "pattern": "\\S"
+    },
+    "font": {
+      "description": "A TTF or OTF file inside the mod folder, as a relative path. Optional.",
+      "type": "string"
+    },
+    "fontLicense": {
+      "description": "The font's licence. Required when font is set.",
+      "type": "string",
+      "minLength": 1
+    },
+    "entries": {
+      "description": "The texts, one per key. Each key at most once.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "description": "A key of the game's English table.",
+            "type": "string",
+            "minLength": 1
+          },
+          "value": {
+            "description": "The text in this language.",
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "key",
+          "value"
+        ]
+      },
+      "maxItems": 20000
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "code",
+    "name",
+    "entries"
+  ],
+  "dependentRequired": {
+    "font": [
+      "fontLicense"
+    ]
+  }
+}

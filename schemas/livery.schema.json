@@ -1,0 +1,253 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carlinetycoon.github.io/schemas/livery.schema.json",
+  "title": "Car Line Tycoon livery (.clt-livery.json)",
+  "description": "A livery: colours by channel with their paint finish, and an emblem chosen among the game's own.",
+  "type": "object",
+  "properties": {
+    "format": {
+      "description": "The kind of file. Always this value.",
+      "const": "car-line-tycoon.livery"
+    },
+    "formatVersion": {
+      "description": "The version of the format. The game reads version 1 and refuses a newer one.",
+      "type": "integer",
+      "const": 1
+    },
+    "gameVersion": {
+      "description": "The game version that wrote the file. Informative only.",
+      "type": "string"
+    },
+    "id": {
+      "description": "The file's id.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]{2,40}$"
+    },
+    "name": {
+      "description": "The livery's name. The studio uses the file name when it is empty.",
+      "type": "string"
+    },
+    "colors": {
+      "description": "The colours. Channels left out take the studio's defaults on import.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "channel": {
+            "description": "The colour channel. Each channel at most once.",
+            "type": "string",
+            "enum": [
+              "body",
+              "roof",
+              "interior",
+              "trim",
+              "chassis",
+              "wheels",
+              "powertrain"
+            ]
+          },
+          "value": {
+            "description": "The colour as #RRGGBB or #RRGGBBAA.",
+            "type": "string",
+            "pattern": "^#([0-9A-Fa-f]{6}|[0-9A-Fa-f]{8})$"
+          },
+          "finish": {
+            "description": "The paint finish by name. Leave it out for normal paint. Only body, roof, trim and wheels take a finish other than normal.",
+            "type": "string",
+            "enum": [
+              "normal",
+              "metallic",
+              "matte",
+              "pearl",
+              "flake",
+              "chrome"
+            ]
+          }
+        },
+        "required": [
+          "channel",
+          "value"
+        ],
+        "if": {
+          "properties": {
+            "channel": {
+              "enum": [
+                "interior",
+                "chassis",
+                "powertrain"
+              ]
+            }
+          },
+          "required": [
+            "channel"
+          ]
+        },
+        "then": {
+          "properties": {
+            "finish": {
+              "enum": [
+                "normal"
+              ]
+            }
+          }
+        }
+      },
+      "minItems": 1,
+      "maxItems": 7
+    },
+    "emblem": {
+      "type": "object",
+      "properties": {
+        "shape": {
+          "description": "The badge's shape.",
+          "type": "string",
+          "enum": [
+            "shield",
+            "circle",
+            "oval",
+            "rounded_square",
+            "diamond",
+            "octagon",
+            "winged",
+            "banner",
+            "deco_fan",
+            "chevron_shield"
+          ]
+        },
+        "pattern": {
+          "description": "The badge's pattern.",
+          "type": "string",
+          "enum": [
+            "plain",
+            "horizontal",
+            "vertical",
+            "diagonal",
+            "checkered",
+            "quartered",
+            "chevron",
+            "sunburst",
+            "border_ring"
+          ]
+        },
+        "color1": {
+          "description": "The first badge colour.",
+          "type": "string",
+          "enum": [
+            "cream",
+            "ivory",
+            "racing_red",
+            "burgundy",
+            "dark_teal",
+            "navy",
+            "bottle_green",
+            "ochre",
+            "amber",
+            "black",
+            "silver",
+            "sky_blue",
+            "leather",
+            "mint",
+            "rose",
+            "gold"
+          ]
+        },
+        "color2": {
+          "description": "The second badge colour.",
+          "type": "string",
+          "enum": [
+            "cream",
+            "ivory",
+            "racing_red",
+            "burgundy",
+            "dark_teal",
+            "navy",
+            "bottle_green",
+            "ochre",
+            "amber",
+            "black",
+            "silver",
+            "sky_blue",
+            "leather",
+            "mint",
+            "rose",
+            "gold"
+          ]
+        },
+        "icon": {
+          "description": "The badge's icon.",
+          "type": "string",
+          "enum": [
+            "horse",
+            "eagle",
+            "lion",
+            "star",
+            "lightning",
+            "wheel",
+            "crown",
+            "gear",
+            "wing",
+            "arrow",
+            "hawk_head",
+            "fox",
+            "bull",
+            "swallow",
+            "anchor",
+            "laurel",
+            "piston",
+            "spark_plug",
+            "globe",
+            "flame",
+            "jack_russell"
+          ]
+        },
+        "iconColor": {
+          "description": "The icon's colour.",
+          "type": "string",
+          "enum": [
+            "cream",
+            "ivory",
+            "racing_red",
+            "burgundy",
+            "dark_teal",
+            "navy",
+            "bottle_green",
+            "ochre",
+            "amber",
+            "black",
+            "silver",
+            "sky_blue",
+            "leather",
+            "mint",
+            "rose",
+            "gold"
+          ]
+        },
+        "mascotFinish": {
+          "description": "The finish of the bonnet mascot.",
+          "type": "string",
+          "enum": [
+            "chrome",
+            "brass"
+          ]
+        }
+      },
+      "required": [
+        "shape",
+        "pattern",
+        "color1",
+        "color2",
+        "icon",
+        "iconColor",
+        "mascotFinish"
+      ],
+      "description": "The emblem. The file needs a valid one; importing a livery in the studio uses its colours only."
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "colors",
+    "emblem"
+  ]
+}

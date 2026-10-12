@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carlinetycoon.github.io/schemas/manifest.schema.json",
+  "title": "Car Line Tycoon mod manifest (mod.json)",
+  "description": "The manifest of a mod folder. The folder's name must be the mod's id.",
+  "type": "object",
+  "properties": {
+    "format": {
+      "description": "The kind of file. Always this value.",
+      "const": "car-line-tycoon.mod"
+    },
+    "formatVersion": {
+      "description": "The version of the format. The game reads version 1 and refuses a newer one.",
+      "type": "integer",
+      "const": 1
+    },
+    "gameVersion": {
+      "description": "The oldest game version the mod needs, as \"0.6.0\" or \">=0.6.0\". A newer version than the game's turns the mod off with a warning.",
+      "type": "string",
+      "pattern": "^\\s*(>=)?\\s*[0-9]+(\\.[0-9]+){1,3}\\s*$"
+    },
+    "id": {
+      "description": "The mod's id: the same text as the folder's name.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]{2,40}$"
+    },
+    "version": {
+      "description": "The mod's own version, shown on the Mods page.",
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "description": "The mod's name per language, by two-letter code (\"en\", \"it\", ...). English is the fallback.",
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "description": "The mod's description per language, by two-letter code.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "authors": {
+      "description": "The authors, shown on the Mods page.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "type": {
+      "description": "What the mod holds. A mod of one type reads only files of that type; a pack reads all five.",
+      "type": "string",
+      "enum": [
+        "model",
+        "livery",
+        "layout",
+        "scenario",
+        "language",
+        "pack"
+      ]
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "version",
+    "name",
+    "type"
+  ]
+}

@@ -1,0 +1,1033 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="为 Car Line Tycoon 制作模组：车型、涂装、布局、场景和语言。">
+      
+      
+      
+        <link rel="canonical" href="https://carlinetycoon.github.io/zh/troubleshooting/">
+      
+      
+        <link rel="prev" href="../examples/">
+      
+      
+        <link rel="next" href="../changelog/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>故障排查 - Car Line Tycoon 模组制作</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#troubleshooting" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href="../" title="Car Line Tycoon 模组制作" class="md-header__button md-logo" aria-label="Car Line Tycoon 模组制作" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Car Line Tycoon 模组制作
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              故障排查
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue-grey" data-md-color-accent="amber"  aria-label="Dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="amber"  aria-label="Light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="选择当前语言">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../troubleshooting/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../ru/troubleshooting/" hreflang="ru" class="md-select__link">
+              Русский
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="zh" class="md-select__link">
+              简体中文
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Car Line Tycoon 模组制作" class="md-nav__button md-logo" aria-label="Car Line Tycoon 模组制作" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Car Line Tycoon 模组制作
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    首页
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    入门指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    文件格式
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            文件格式
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formats/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    概览
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formats/manifest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    清单文件（mod.json）
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formats/model/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    车型
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formats/livery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    涂装
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formats/layout/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    布局
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formats/scenario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    场景
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../formats/language/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    语言
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reference/values/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    允许的值
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    示例模组
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    故障排查
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    故障排查
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      模组页面上的警告
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模组页面上的警告">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invalid-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      无效文件：文件名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newer" class="md-nav__link">
+    <span class="md-ellipsis">
+      需要更新的游戏版本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#too-large" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件过大：文件名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manifest" class="md-nav__link">
+    <span class="md-ellipsis">
+      mod.json 缺失或无效
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件夹名称与 mod.json 中的 ID 不一致
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      该模组没有可用文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      导入时的提示
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#not-listed" class="md-nav__link">
+    <span class="md-ellipsis">
+      完全看不到我的模组
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenario-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      我的场景没有出现在列表中
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    更新日志
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planned/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    计划中
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#warnings" class="md-nav__link">
+    <span class="md-ellipsis">
+      模组页面上的警告
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="模组页面上的警告">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#invalid-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      无效文件：文件名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#newer" class="md-nav__link">
+    <span class="md-ellipsis">
+      需要更新的游戏版本
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#too-large" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件过大：文件名
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manifest" class="md-nav__link">
+    <span class="md-ellipsis">
+      mod.json 缺失或无效
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      文件夹名称与 mod.json 中的 ID 不一致
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#no-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      该模组没有可用文件
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#import-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      导入时的提示
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#not-listed" class="md-nav__link">
+    <span class="md-ellipsis">
+      完全看不到我的模组
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenario-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      我的场景没有出现在列表中
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="troubleshooting">故障排查<a class="headerlink" href="#troubleshooting" title="Permanent link">&para;</a></h1>
+<p>模组出现问题时，其在模组页面上的条目会显示红色边框和一行红色警告。问题解决前，游戏不会使用该模组，无论开关处于什么位置。游戏会为每个模组显示它发现的第一个问题对应的警告；修复后按<strong>重新加载</strong>，即可查看是否还有其他问题。</p>
+<h2 id="warnings">模组页面上的警告<a class="headerlink" href="#warnings" title="Permanent link">&para;</a></h2>
+<h3 id="invalid-file">无效文件：<em>文件名</em><a class="headerlink" href="#invalid-file" title="Permanent link">&para;</a></h3>
+<p>游戏无法读取该文件，或文件内容不完整。请按以下顺序检查：</p>
+<ol>
+<li><strong>JSON 格式是否有效？</strong>缺少逗号、在 <code>}</code> 或 <code>]</code> 前多出逗号，或缺少引号，都会导致错误。JSON 验证器或支持 <a href="../formats/#json-schemas">JSON Schema</a> 的编辑器可以指出错误行。</li>
+<li><strong>文件头是否正确？</strong><code>format</code>必须与文件类型完全一致（<code>.clt-livery.json</code>文件应填写 <code>car-line-tycoon.livery</code>），<code>formatVersion</code>必须为 <code>1</code>。</li>
+<li><strong>字段类型是否正确？</strong>数字应为普通数字（<code>4</code>），文本应加引号（<code>"Harbour Blue"</code>），<code>true</code>和<code>false</code>不加引号，列表应使用方括号。数字字段填写单词会使文件无效。</li>
+<li><strong>必需字段是否齐全？</strong>每个格式的参考页面都会标明必需字段。最常见的缺失项：<code>id</code>、车型文件中的空<code>parts</code>列表、布局中的<code>objects</code>／<code>walls</code>／<code>areas</code>（为空时填写 <code>[]</code>），以及场景中的<code>texts</code>。</li>
+<li><strong>字段值是否允许？</strong>例如，<code>id</code>包含大写字母或空格、徽章颜色不在调色板内、区域<code>kind</code>不是游戏支持的值，或场景目标不是自由经营目标。<a href="../reference/values/">允许的值</a>页面列出了可用值。</li>
+</ol>
+<p>当警告提到 <code>mod.json</code> 时，问题出在清单文件中。请参阅<a href="../formats/manifest/#rules">清单文件</a>。</p>
+<h3 id="newer">需要更新的游戏版本<a class="headerlink" href="#newer" title="Permanent link">&para;</a></h3>
+<p>模组的 <code>mod.json</code> 中的 <code>gameVersion</code> 要求的游戏版本高于当前版本，或者其中一个文件的 <code>formatVersion</code> 高于 <code>1</code>。请更新游戏；如果模组中的版本填写有误，请将其调低。</p>
+<h3 id="too-large">文件过大：<em>文件名</em><a class="headerlink" href="#too-large" title="Permanent link">&para;</a></h3>
+<p>模组文件最大为 2 MB，语言文件最大为 8 MB。可将大型模组拆分为多个文件，例如每个车型单独使用一个文件。</p>
+<h3 id="manifest">mod.json 缺失或无效<a class="headerlink" href="#manifest" title="Permanent link">&para;</a></h3>
+<p>模组文件夹中的一个文件夹没有 <code>mod.json</code>，且名称不符合有效 ID 格式，因此游戏无法将其作为合集使用。请添加 <code>mod.json</code>，或将文件夹重命名为仅含小写字母、数字和下划线的名称（3 至 41 个字符，并以字母开头）。</p>
+<h3 id="folder">文件夹名称与 mod.json 中的 ID 不一致<a class="headerlink" href="#folder" title="Permanent link">&para;</a></h3>
+<p>文件夹名称必须与其 <code>mod.json</code> 中的 <code>id</code> 完全相同。请重命名其中一项。</p>
+<h3 id="no-files">该模组没有可用文件<a class="headerlink" href="#no-files" title="Permanent link">&para;</a></h3>
+<p>游戏没有在该模组中找到可用文件。请检查以下内容：</p>
+<ul>
+<li>文件以 <code>.clt-model.json</code>、<code>.clt-livery.json</code>、<code>.clt-layout.json</code>、<code>.clt-scenario.json</code> 或 <code>.clt-lang.json</code> 结尾，</li>
+<li>文件类型与清单文件中的 <code>type</code> 匹配（<code>livery</code>模组只读取涂装文件；需要多种类型时请使用 <code>pack</code>），</li>
+<li>文件位于模组文件夹下三层以内。</li>
+</ul>
+<h2 id="import-messages">导入时的提示<a class="headerlink" href="#import-messages" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>提示</th>
+<th>位置</th>
+<th>处理方法</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>模组文件夹中没有此类型的文件。</strong></td>
+<td>导入列表</td>
+<td>没有活动模组包含此类型的文件。请确认模组已启用且没有警告，然后在模组页面按<strong>重新加载</strong>。</td>
+</tr>
+<tr>
+<td><strong>此涂装包含不支持的颜色。</strong></td>
+<td>设计工作室、<strong>导入涂装</strong></td>
+<td>颜色使用了未知颜色通道、重复通道、非 <code>#RRGGBB</code> 或 <code>#RRGGBBAA</code> 的值，或在不支持漆面效果的通道上设置了漆面效果。请参阅<a href="../formats/livery/#checks">涂装</a>。</td>
+</tr>
+<tr>
+<td><strong>布局已导入：已放置 N 个，已跳过 M 个</strong></td>
+<td><strong>建造</strong> → <strong>场地</strong></td>
+<td>建造规则拒绝了被跳过的部件：该格已被占用、资金不足、对象需要先完成相应研究，或该场地尚未归你所有。请参阅<a href="../formats/layout/#import">布局</a>。</td>
+</tr>
+<tr>
+<td><strong>无法保存到 <em>路径</em></strong></td>
+<td>任意导出操作</td>
+<td>游戏无法写入 <code>exports</code> 文件夹。请检查磁盘空间以及文件夹的写入权限。</td>
+</tr>
+</tbody>
+</table>
+<p>导入车型的预览出现问题时，会显示与粘贴设计相同的提示，例如目录中没有该部件、部件无法组合，或颜色不受游戏支持。请参阅<a href="../formats/model/#checks">车型</a>。</p>
+<h2 id="not-listed">完全看不到我的模组<a class="headerlink" href="#not-listed" title="Permanent link">&para;</a></h2>
+<ul>
+<li>文件或文件夹必须直接放在模组文件夹中：<code>Mods/my_mod/mod.json</code>或<code>Mods/my_file.clt-livery.json</code>。若模组又嵌套一层，例如<code>Mods/downloads/my_mod/</code>，游戏会将其读取为名为<code>downloads</code>的模组。</li>
+<li>主菜单打开时，游戏会读取模组文件夹。修改后请按<strong>重新加载</strong>。</li>
+<li>符号链接和目录联接形式的文件夹及文件会被跳过。请将实际文件复制到模组文件夹中。</li>
+<li>确认你查看的是正确的文件夹：模组页面上的<strong>打开模组文件夹</strong>可以打开该文件夹。</li>
+</ul>
+<h2 id="scenario-missing">我的场景没有出现在列表中<a class="headerlink" href="#scenario-missing" title="Permanent link">&para;</a></h2>
+<p>模组已启用且没有警告时，其场景会显示在新游戏 → <strong>自由经营</strong> → <strong>场景</strong>中。模组场景排在三个官方场景之后。</p>
+<p>游戏拒绝启动场景时，请检查 <code>startChapter</code>：该字段必须为空或填写一个<a href="../reference/values/#chapters">剧情章节</a>。</p>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  回到页面顶部
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.top", "content.code.copy", "search.highlight"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

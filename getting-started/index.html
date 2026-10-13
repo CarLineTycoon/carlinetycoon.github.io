@@ -634,6 +634,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sounds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../examples/" class="md-nav__link">
         
   
@@ -645,6 +667,171 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    State and RNG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limits and errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -812,6 +999,7 @@
 
 
 <h1 id="getting-started">Getting started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
+<p>Lua script authors can use the <a href="../lua/getting-started/">API v1 development guide</a>.</p>
 <h2 id="mods-folder">The Mods folder<a class="headerlink" href="#mods-folder" title="Permanent link">&para;</a></h2>
 <p>The game reads mods from one folder on your computer, next to your saves.</p>
 <p>The quickest way to open it: start the game, choose <strong>Mods</strong> in the main menu, then press <strong>Open mod folder</strong>. The game creates the folder if it does not exist yet and opens it in your file browser.</p>
@@ -854,7 +1042,7 @@
 <ul>
 <li>Ids use lower-case letters, digits and underscores, start with a letter and are 3 to 41 characters long.</li>
 <li>The game finds mod files up to three folder levels below the mod folder. You can organise them in subfolders such as <code>models/</code> or <code>layouts/</code>.</li>
-<li>The file extension tells the game what a file is: <code>.clt-model.json</code>, <code>.clt-livery.json</code>, <code>.clt-layout.json</code>, <code>.clt-scenario.json</code> or <code>.clt-lang.json</code>. Other files are left alone.</li>
+<li>The file extension tells the game what a file is: <code>.clt-model.json</code>, <code>.clt-livery.json</code>, <code>.clt-layout.json</code>, <code>.clt-scenario.json</code> or <code>.clt-lang.json</code>. Other files are left alone, with one exception: the sound files (<code>.wav</code> and <code>.ogg</code>) that a version 2 <code>mod.json</code> declares. See <a href="../assets/audio/">Sounds</a>.</li>
 <li>Symbolic links and junctions are skipped.</li>
 <li>The <code>exports</code> folder belongs to the game: files you export from the game go there. Its files show up in the import lists, and the Mods page leaves it out.</li>
 </ul>
@@ -864,7 +1052,8 @@
 <li>a switch to turn it on or off,</li>
 <li>its name (in your language when the manifest has it),</li>
 <li>its version, its authors and its type,</li>
-<li>a red border and a red warning line when something is wrong (see <a href="../troubleshooting/">Troubleshooting</a>).</li>
+<li>a red border and a red warning line when something is wrong (see <a href="../troubleshooting/">Troubleshooting</a>),</li>
+<li>for a mod with sounds, a <strong>Listen</strong> button for each signal it replaces, and <strong>Details</strong> when the mod has errors or notes.</li>
 </ul>
 <p>The game reads the Mods folder each time the main menu opens. After you change a file, press <strong>Reload</strong> to read it again. Mods are listed in alphabetical order of their English name.</p>
 <p>A new mod starts switched on. The game keeps your choices in <code>mods.json</code>, next to the Mods folder.</p>
@@ -898,6 +1087,10 @@
 <td>Language</td>
 <td><strong>Options</strong> → <strong>Language</strong> and the language list of the main menu, with the share of texts the language covers. Development builds only for now.</td>
 </tr>
+<tr>
+<td>Sound</td>
+<td>The confirm and research signals of the game. The sounds are loaded when the main menu reads the Mods folder, and games started or loaded afterwards use them.</td>
+</tr>
 </tbody>
 </table>
 <p>When you start or load a game, the game writes the active mods into the save: id, version, type and a hash of their files. The saves list marks such saves <strong>with mods</strong>, and the pause menu shows <strong>Active mods: N</strong>. A save that used a mod you later removed still loads.</p>
@@ -908,7 +1101,7 @@
 <p>Every mod file starts with three fields:</p>
 <ul>
 <li><code>format</code>: the kind of file, for example <code>car-line-tycoon.livery</code>.</li>
-<li><code>formatVersion</code>: the version of that format. Every format is at version <strong>1</strong> today.</li>
+<li><code>formatVersion</code>: the version of that format. The five content formats are at version <strong>1</strong>. The manifest can be at version <strong>1</strong> or <strong>2</strong>; version 2 declares sounds.</li>
 <li><code>gameVersion</code>: the game version that wrote the file. The game ignores it in content files.</li>
 </ul>
 <p>The game reads files of its own format version and older ones. A file with a newer <code>formatVersion</code> gets the warning <strong>Requires a newer game version</strong>.</p>
@@ -929,6 +1122,10 @@
 <tr>
 <td>0.6.1 and later</td>
 <td>Import and export of models, liveries and layouts; language mods in development builds</td>
+</tr>
+<tr>
+<td>0.6.4 and later</td>
+<td>Manifest version 2: sounds for the confirm and research signals, with <strong>Listen</strong> on the Mods page</td>
 </tr>
 </tbody>
 </table>

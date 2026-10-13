@@ -538,6 +538,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    声音
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../examples/" class="md-nav__link">
         
   
@@ -549,6 +571,171 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    入门指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    状态与随机数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    限制与错误
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API 更新日志
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -630,6 +817,15 @@
       目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v0-6-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.6.4
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#v0-6-3" class="md-nav__link">
@@ -724,6 +920,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#v0-6-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.6.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v0-6-3" class="md-nav__link">
     <span class="md-ellipsis">
       0.6.3
@@ -776,7 +981,18 @@
 
 
 <h1 id="changelog">更新日志<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
-<p>各游戏版本中面向模组作者的变更。所有文件格式仍为 <code>formatVersion</code> 1。</p>
+<p>各游戏版本中面向模组作者的变更。五种内容格式的版本均为 <code>formatVersion</code> 1；清单文件可使用版本 1 或 2。</p>
+<h2 id="v0-6-4">0.6.4<a class="headerlink" href="#v0-6-4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>清单文件版本 2：</strong>可声明 <code>requires</code>、<code>assets</code> 和 <code>audioBindings</code>。五种内容格式和清单文件版本 1 仍按原方式读取。仅支持版本 1 的游戏读取版本 2 清单文件时，会显示<strong>需要更新的游戏版本</strong>。</li>
+<li><strong>声音：</strong>模组可以使用 WAV 或 OGG Vorbis 文件替换 <strong>confirm</strong> 和 <strong>research</strong> 提示音。参见<a href="../assets/audio/">声音</a>。</li>
+<li><strong>模组页面：</strong>每个模组声音都有一个<strong>试听</strong>按钮；<strong>详情</strong>列表最多显示 20 条错误和注意事项；未知功能、共用提示音和重复 ID 也会显示警告。</li>
+<li><strong>存档：</strong>存档中的模组记录会保留此前启用过的模组，因此移除模组后，使用该模组游玩的存档仍会显示模组标记。</li>
+<li><strong>两个带声音的示例模组：</strong><code>example_audio</code> 和 <code>example_audio_ogg</code>。</li>
+<li><strong>Lua 脚本功能开发中：</strong><a href="../lua/getting-started/">Lua 页面</a>介绍了正式发布前的 <code>lua.v1</code>。正式版游戏目前无法运行 Lua 脚本。含脚本的模组会整体停用，包括其中的声音；模组页面对应行会显示<strong>此版本无法使用 Lua 脚本。</strong>开发版支持运行脚本以供测试。</li>
+<li><strong>研究树：</strong>已重新编排。<code>plate</code> 材料的购买权限从 <code>process_1</code> 研究起开放，早于军事研究；148 项调整将配方、部件和选项安排在其所需工位和机器等级之后。请根据<a href="../reference/values/">允许的值</a>检查场景的 <code>completedResearch</code> 以及布局中的对象。</li>
+<li><strong>生产线：</strong>汽车现在按以下顺序经过生产线：车架、带车轮的车身、发动机，然后是车头、特殊工位、喷漆和质检。文件格式和对象 ID 保持不变。</li>
+</ul>
 <h2 id="v0-6-3">0.6.3<a class="headerlink" href="#v0-6-3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>文件格式和模组页面均无变化。</li>

@@ -634,6 +634,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    声音
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../examples/" class="md-nav__link">
         
   
@@ -645,6 +667,171 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    入门指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    状态与随机数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    限制与错误
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API 更新日志
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -812,6 +999,7 @@
 
 
 <h1 id="getting-started">入门指南<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
+<p>Lua 脚本作者可以参考 <a href="../lua/getting-started/">API v1 开发指南</a>。</p>
 <h2 id="mods-folder">模组文件夹<a class="headerlink" href="#mods-folder" title="Permanent link">&para;</a></h2>
 <p>游戏会从电脑上的一个文件夹读取模组，该文件夹位于存档文件夹旁。</p>
 <p>最快的打开方式：启动游戏，在主菜单选择<strong>模组</strong>，然后按<strong>打开模组文件夹</strong>。如果文件夹尚不存在，游戏会创建它，然后用文件浏览器打开。</p>
@@ -854,17 +1042,18 @@
 <ul>
 <li>ID 使用小写字母、数字和下划线，以字母开头，长度为 3 至 41 个字符。</li>
 <li>游戏会查找模组文件夹下最多三层子文件夹中的模组文件。你可以将文件整理到 <code>models/</code> 或 <code>layouts/</code> 等子文件夹中。</li>
-<li>文件扩展名用于识别文件类型：<code>.clt-model.json</code>、<code>.clt-livery.json</code>、<code>.clt-layout.json</code>、<code>.clt-scenario.json</code> 或 <code>.clt-lang.json</code>。其他文件会被忽略。</li>
+<li>游戏根据文件扩展名识别文件类型：<code>.clt-model.json</code>、<code>.clt-livery.json</code>、<code>.clt-layout.json</code>、<code>.clt-scenario.json</code> 或 <code>.clt-lang.json</code>。其他文件会被忽略，但版本 2 的 <code>mod.json</code> 声明的声音文件（<code>.wav</code> 和 <code>.ogg</code>）除外。参见<a href="../assets/audio/">声音</a>。</li>
 <li>符号链接和目录联接会被跳过。</li>
-<li><code>exports</code> 文件夹归游戏所有：从游戏导出的文件会放在这里。这些文件会显示在导入列表中，模组页面不会列出此文件夹。</li>
+<li><code>exports</code> 文件夹由游戏管理：从游戏导出的文件会保存到该文件夹。里面的文件会显示在导入列表中，模组页面不会列出该文件夹。</li>
 </ul>
 <h2 id="mods-page">模组页面<a class="headerlink" href="#mods-page" title="Permanent link">&para;</a></h2>
 <p>在主菜单中选择<strong>模组</strong>。每个模组都会显示一行信息，包括：</p>
 <ul>
 <li>用于启用或停用模组的开关，</li>
 <li>模组名称（清单文件提供对应语言时会显示该语言的名称），</li>
-<li>版本、作者和类型，</li>
-<li>出现问题时显示红色边框和红色警告行（参见<a href="../troubleshooting/">故障排查</a>）。</li>
+<li>模组版本、作者和类型，</li>
+<li>出现问题时显示红色边框和红色警告行（参见<a href="../troubleshooting/">故障排查</a>），</li>
+<li>对于带声音的模组，每个替换的提示音都有一个<strong>试听</strong>按钮；模组存在错误或注意事项时会显示<strong>详情</strong>。</li>
 </ul>
 <p>每次打开主菜单时，游戏都会读取模组文件夹。修改文件后，按<strong>重新加载</strong>即可重新读取。模组按英文名称的字母顺序排列。</p>
 <p>新模组默认处于启用状态。游戏会将你的选择保存在模组文件夹旁边的 <code>mods.json</code> 中。</p>
@@ -880,7 +1069,7 @@
 <tbody>
 <tr>
 <td>车型</td>
-<td><strong>设计方案</strong>页面：<strong>导入车型</strong>会列出车型文件；选择文件可查看与粘贴设计相同的预览，然后将其导入为新车型。车型详情中的<strong>导出车型</strong>会将车型写入 <code>exports/&lt;name&gt;.clt-model.json</code>。</td>
+<td><strong>设计方案</strong>页面：<strong>导入车型</strong>会列出车型文件；选择文件后会显示与粘贴设计相同的预览，然后可将其导入为新车型。车型详情中的<strong>导出车型</strong>会写入 <code>exports/&lt;name&gt;.clt-model.json</code>。</td>
 </tr>
 <tr>
 <td>涂装</td>
@@ -888,15 +1077,19 @@
 </tr>
 <tr>
 <td>布局</td>
-<td><strong>建造</strong> → <strong>场地</strong>：<strong>导入布局</strong>会建造文件中的墙壁、区域和对象；<strong>导出布局</strong>会保存当前场地打开楼层的布局。</td>
+<td><strong>建造</strong> → <strong>场地</strong>：<strong>导入布局</strong>会按文件建造墙、区域和对象；<strong>导出布局</strong>会保存当前场地已打开的楼层。</td>
 </tr>
 <tr>
 <td>场景</td>
-<td>新游戏 → <strong>自由经营</strong>：<strong>场景</strong>选择器会在官方场景之后列出活动模组中的场景，并显示模组名称。</td>
+<td>新游戏 → <strong>自由经营</strong>：<strong>场景</strong>选择器会在官方场景之后列出启用模组提供的场景，并显示模组名称。</td>
 </tr>
 <tr>
 <td>语言</td>
-<td><strong>选项</strong> → <strong>语言</strong>以及主菜单的语言列表中会显示语言模组及其覆盖文本的比例。目前仅限开发版。</td>
+<td><strong>选项</strong> → <strong>语言</strong>以及主菜单的语言列表会显示该语言覆盖的文本比例。目前仅限开发版。</td>
+</tr>
+<tr>
+<td>声音</td>
+<td>游戏的确认提示音和研究完成提示音。主菜单读取模组文件夹时会加载声音，此后开始或载入的游戏会使用这些声音。</td>
 </tr>
 </tbody>
 </table>
@@ -908,8 +1101,8 @@
 <p>每个模组文件都以三个字段开头：</p>
 <ul>
 <li><code>format</code>：文件类型，例如 <code>car-line-tycoon.livery</code>。</li>
-<li><code>formatVersion</code>：该格式的版本。目前所有格式均为 <strong>1</strong>。</li>
-<li><code>gameVersion</code>：生成该文件的游戏版本。游戏会忽略内容文件中的此字段。</li>
+<li><code>formatVersion</code>：该格式的版本。五种内容格式的版本均为 <strong>1</strong>。清单文件可使用 <strong>1</strong> 或 <strong>2</strong>；版本 2 可声明声音。</li>
+<li><code>gameVersion</code>：生成文件时的游戏版本。内容文件中的此字段会被游戏忽略。</li>
 </ul>
 <p>游戏会读取自身格式版本及更早版本的文件。文件的 <code>formatVersion</code> 版本较新时，会显示警告<strong>需要更新的游戏版本</strong>。</p>
 <p>在 <code>mod.json</code> 文件中，<code>gameVersion</code>有独立含义：模组所需的最低游戏版本，可写为 <code>"0.6.1"</code> 或 <code>"&gt;=0.6.1"</code>。游戏版本较旧时，模组会显示相同警告，游戏也不会使用它。</p>
@@ -918,17 +1111,21 @@
 <thead>
 <tr>
 <th>游戏版本</th>
-<th>可读取的内容</th>
+<th>可读取内容</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>0.6.0</td>
-<td>五种格式和 <code>mod.json</code>、模组页面、模组提供的场景</td>
+<td>五种格式、<code>mod.json</code>、模组页面以及模组提供的场景</td>
 </tr>
 <tr>
-<td>0.6.1 及之后版本</td>
+<td>0.6.1 及更高版本</td>
 <td>车型、涂装和布局的导入与导出；开发版支持语言模组</td>
+</tr>
+<tr>
+<td>0.6.4 及更高版本</td>
+<td>清单文件版本 2：确认提示音和研究完成提示音，以及模组页面上的<strong>试听</strong>按钮</td>
 </tr>
 </tbody>
 </table>

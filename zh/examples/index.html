@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://carlinetycoon.github.io/zh/examples/">
       
       
-        <link rel="prev" href="../reference/values/">
+        <link rel="prev" href="../assets/audio/">
       
       
-        <link rel="next" href="../troubleshooting/">
+        <link rel="next" href="../lua/getting-started/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -535,6 +535,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    声音
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -608,6 +630,171 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    入门指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    状态与随机数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    限制与错误
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API 更新日志
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -740,7 +927,10 @@
 
 
 <h1 id="example-mods">示例模组<a class="headerlink" href="#example-mods" title="Permanent link">&para;</a></h1>
-<p>五个小型模组，每种文件格式各一个。它们可在当前游戏版本中正常加载且不会出现警告；每次构建本网站时，都会使用游戏自身的读取器检查它们。</p>
+<p><code>example_lua_price</code> 和 <code>example_lua_counter</code> 展示了普通价格请求
+以及持续保存的销售计数。目前它们仅在开发版中运行，且初始为停用状态；有关启用方式和成就规则，请参见
+<a href="../lua/getting-started/">Lua 指南</a>。</p>
+<p>七个小型模组：五种文件格式各一个，另有两个带声音的模组。它们可在当前游戏版本中加载且不会出现警告；每次构建此网站时，都会使用游戏自带的读取器逐一检查。</p>
 <p>下载示例并解压到<a href="../getting-started/#mods-folder">模组文件夹</a>，然后在模组页面按<strong>重新加载</strong>即可试用。每个压缩包都包含一个模组文件夹。</p>
 <table>
 <thead>
@@ -777,9 +967,19 @@
 <td>以新的语言条目提供模组页面的三条文本。开发版中可在<strong>选项</strong> → <strong>语言</strong>中选择。</td>
 </tr>
 <tr>
+<td><a href="../../downloads/example_audio.zip">example_audio.zip</a></td>
+<td>声音（WAV）</td>
+<td>用 WAV 文件制作的双音铃声，用作 <strong>research</strong> 提示音。参见<a href="../assets/audio/">声音</a>。</td>
+</tr>
+<tr>
+<td><a href="../../downloads/example_audio_ogg.zip">example_audio_ogg.zip</a></td>
+<td>声音（OGG）</td>
+<td>用 OGG Vorbis 文件制作的短促滴答声，用作 <strong>confirm</strong> 提示音。</td>
+</tr>
+<tr>
 <td><a href="../../downloads/all-examples.zip">all-examples.zip</a></td>
-<td>全部五种</td>
-<td>上述五个文件夹合在一个压缩包中。</td>
+<td>全部七个</td>
+<td>将上述七个文件夹放在同一个压缩包中。</td>
 </tr>
 </tbody>
 </table>
@@ -801,6 +1001,14 @@
 <span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"livery"</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>两个声音示例由正弦波制成，并以 CC0-1.0 许可发布，许可文本位于 <code>license.txt</code>。<code>example_audio</code> 中的内容如下：</p>
+<div class="highlight"><pre><span></span><code>example_audio/
+  mod.json
+  license.txt
+  audio/
+    research_bell.wav
+</code></pre></div>
+<p>试用方法：将文件夹复制到模组文件夹，按<strong>重新加载</strong>，在模组对应行按<strong>试听</strong>，启用模组，然后开始新游戏并完成一项研究（或在 OGG 示例中按下确认按钮）。停用模组后即可再次听到游戏自带的声音。</p>
 <h2 id="make-your-own">基于示例制作模组<a class="headerlink" href="#make-your-own" title="Permanent link">&para;</a></h2>
 <ol>
 <li>复制示例文件夹并为其指定新名称，例如 <code>my_livery</code>。</li>

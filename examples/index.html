@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://carlinetycoon.github.io/examples/">
       
       
-        <link rel="prev" href="../reference/values/">
+        <link rel="prev" href="../assets/audio/">
       
       
-        <link rel="next" href="../troubleshooting/">
+        <link rel="next" href="../lua/getting-started/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -535,6 +535,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sounds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -608,6 +630,171 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    State and RNG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limits and errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -740,7 +927,10 @@
 
 
 <h1 id="example-mods">Example mods<a class="headerlink" href="#example-mods" title="Permanent link">&para;</a></h1>
-<p>Five small mods, one for each file format. They load in the current version of the game with no warning, and every one of them is checked against the game's own readers each time this site is built.</p>
+<p><code>example_lua_price</code> and <code>example_lua_counter</code> demonstrate ordinary-price requests
+and persistent sales counts. For now they run only in development builds of the game, and they start disabled; see the
+<a href="../lua/getting-started/">Lua guide</a> for activation and achievement behavior.</p>
+<p>Seven small mods: one for each of the five file formats and two with a sound. They load in the current version of the game with no warning, and every one of them is checked against the game's own readers each time this site is built.</p>
 <p>To try one, download it, unzip it into the <a href="../getting-started/#mods-folder">Mods folder</a> and press <strong>Reload</strong> on the Mods page. Each zip holds one mod folder.</p>
 <table>
 <thead>
@@ -777,9 +967,19 @@
 <td>Three texts of the Mods page in a new language entry. Pick it in <strong>Options</strong> → <strong>Language</strong> (development builds).</td>
 </tr>
 <tr>
+<td><a href="../downloads/example_audio.zip">example_audio.zip</a></td>
+<td>Sound (WAV)</td>
+<td>A two-note bell for the <strong>research</strong> signal, written as a WAV file. See <a href="../assets/audio/">Sounds</a>.</td>
+</tr>
+<tr>
+<td><a href="../downloads/example_audio_ogg.zip">example_audio_ogg.zip</a></td>
+<td>Sound (OGG)</td>
+<td>A short tick for the <strong>confirm</strong> signal, written as an OGG Vorbis file.</td>
+</tr>
+<tr>
 <td><a href="../downloads/all-examples.zip">all-examples.zip</a></td>
-<td>All five</td>
-<td>The five folders above in one zip.</td>
+<td>All seven</td>
+<td>The seven folders above in one zip.</td>
 </tr>
 </tbody>
 </table>
@@ -801,6 +1001,14 @@
 <span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"livery"</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>The two sound examples are made from sine waves and released under CC0-1.0, with the licence text in <code>license.txt</code>. <code>example_audio</code> holds this:</p>
+<div class="highlight"><pre><span></span><code>example_audio/
+  mod.json
+  license.txt
+  audio/
+    research_bell.wav
+</code></pre></div>
+<p>To try them: copy the folder into the Mods folder, press <strong>Reload</strong>, press <strong>Listen</strong> on the mod's row, switch the mod on, start a new game and finish a research (or press a confirm button for the OGG example). Switch the mod off to hear the game's own sound again.</p>
 <h2 id="make-your-own">Make your own from an example<a class="headerlink" href="#make-your-own" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Copy the example folder and give it a new name, such as <code>my_livery</code>.</li>

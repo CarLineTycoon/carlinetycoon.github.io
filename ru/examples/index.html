@@ -13,10 +13,10 @@
         <link rel="canonical" href="https://carlinetycoon.github.io/ru/examples/">
       
       
-        <link rel="prev" href="../reference/values/">
+        <link rel="prev" href="../assets/audio/">
       
       
-        <link rel="next" href="../troubleshooting/">
+        <link rel="next" href="../lua/getting-started/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -535,6 +535,28 @@
       
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Звуки
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
@@ -608,6 +630,171 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Начало работы
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Состояние и ГСЧ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ограничения и ошибки
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    История изменений API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -740,14 +927,17 @@
 
 
 <h1 id="example-mods">Примеры модов<a class="headerlink" href="#example-mods" title="Permanent link">&para;</a></h1>
-<p>Пять небольших модов — по одному для каждого формата файлов. Они загружаются в текущей версии игры без предупреждений, и при каждой сборке сайта все они проверяются средствами чтения самой игры.</p>
+<p><code>example_lua_price</code> и <code>example_lua_counter</code> показывают запросы установки обычной цены
+и сохраняемые счётчики продаж. Пока они работают только в сборках для разработки и изначально выключены; см.
+<a href="../lua/getting-started/">руководство по Lua</a>, где описаны включение и правила достижений.</p>
+<p>Семь небольших модов: по одному для каждого из пяти форматов файлов и ещё два со звуком. Они загружаются в текущей версии игры без предупреждений, и каждый раз при сборке сайта их проверяют средствами чтения самой игры.</p>
 <p>Чтобы попробовать мод, скачайте его и распакуйте в <a href="../getting-started/#mods-folder">папку модов</a>, затем нажмите <strong>Перезагрузить</strong> на странице «Моды». В каждом архиве ZIP находится одна папка мода.</p>
 <table>
 <thead>
 <tr>
 <th>Скачать</th>
 <th>Тип</th>
-<th>Что показывает</th>
+<th>Что показано</th>
 </tr>
 </thead>
 <tbody>
@@ -759,7 +949,7 @@
 <tr>
 <td><a href="../../downloads/example_livery.zip">example_livery.zip</a></td>
 <td>Ливрея</td>
-<td>Двухцветная синяя ливрея с окраской «металлик» и хромированной окраской и эмблемой с якорем. Импортируйте её в разделе <strong>Цветовые схемы</strong> студии.</td>
+<td>Двухцветная синяя ливрея с окраской «металлик», хромированной окраской и эмблемой с якорем. Импортируйте её в разделе <strong>Цветовые схемы</strong> студии.</td>
 </tr>
 <tr>
 <td><a href="../../downloads/example_layout.zip">example_layout.zip</a></td>
@@ -774,12 +964,22 @@
 <tr>
 <td><a href="../../downloads/example_language.zip">example_language.zip</a></td>
 <td>Язык</td>
-<td>Три текста страницы «Моды» для нового языка. Выберите его в разделе <strong>Настройки</strong> → <strong>Язык</strong> (только в сборках для разработки).</td>
+<td>Три текста страницы «Моды» для нового языка. Выберите его в разделе <strong>Настройки</strong> → <strong>Язык</strong> (в сборках для разработки).</td>
+</tr>
+<tr>
+<td><a href="../../downloads/example_audio.zip">example_audio.zip</a></td>
+<td>Звук (WAV)</td>
+<td>Двухнотный звонок для сигнала <strong>research</strong>, записанный в формате WAV. См. раздел <a href="../assets/audio/">Звуки</a>.</td>
+</tr>
+<tr>
+<td><a href="../../downloads/example_audio_ogg.zip">example_audio_ogg.zip</a></td>
+<td>Звук (OGG)</td>
+<td>Короткий щелчок для сигнала <strong>confirm</strong>, записанный в формате OGG Vorbis.</td>
 </tr>
 <tr>
 <td><a href="../../downloads/all-examples.zip">all-examples.zip</a></td>
-<td>Все пять</td>
-<td>Все пять перечисленных выше папок в одном архиве ZIP.</td>
+<td>Все семь</td>
+<td>Все семь папок выше в одном ZIP-архиве.</td>
 </tr>
 </tbody>
 </table>
@@ -801,6 +1001,14 @@
 <span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"livery"</span>
 <span class="p">}</span>
 </code></pre></div>
+<p>Оба звуковых примера созданы из синусоидальных волн и выпущены по лицензии CC0-1.0; текст лицензии находится в <code>license.txt</code>. В <code>example_audio</code> содержится следующее:</p>
+<div class="highlight"><pre><span></span><code>example_audio/
+  mod.json
+  license.txt
+  audio/
+    research_bell.wav
+</code></pre></div>
+<p>Чтобы попробовать моды: скопируйте папку в папку Mods, нажмите <strong>Перезагрузить</strong> на странице «Моды», нажмите <strong>Прослушать</strong> в строке мода, включите мод и начните новую игру; затем завершите исследование (или нажмите кнопку подтверждения для примера OGG). Выключите мод, чтобы снова услышать исходный звук игры.</p>
 <h2 id="make-your-own">Создайте свой мод на основе примера<a class="headerlink" href="#make-your-own" title="Permanent link">&para;</a></h2>
 <ol>
 <li>Скопируйте папку примера и задайте ей новое имя, например <code>my_livery</code>.</li>

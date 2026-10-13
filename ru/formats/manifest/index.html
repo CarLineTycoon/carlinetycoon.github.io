@@ -466,6 +466,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#version-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Версия 2
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -627,6 +636,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Звуки
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../examples/" class="md-nav__link">
         
   
@@ -638,6 +669,171 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Начало работы
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Состояние и ГСЧ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ограничения и ошибки
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    История изменений API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -779,6 +975,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#version-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Версия 2
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -796,6 +1001,11 @@
 
 
 <h1 id="manifest">Манифест (mod.json)<a class="headerlink" href="#manifest" title="Permanent link">&para;</a></h1>
+<p>Общий манифест описывает данные, звуки и скрипты. В <a href="../../lua/getting-started/">руководстве по разработке скриптов Lua</a>
+используется версия 2 с <code>requires: ["lua.v1"]</code> и одним явным объявлением <code>script</code>.
+Звуки и Lua могут входить в один набор, если в <code>requires</code> указаны обе возможности. Релизная версия игры пока не запускает скрипты Lua.
+<a href="../../../schemas/manifestv2.schema.json">Схема версии 2</a> создаётся по тому же
+описанию, что и <a href="../../../schemas/manifest.schema.json">объединённая схема</a>.</p>
 <p>Файл <code>mod.json</code> находится в корне папки мода и сообщает игре, что это за мод. Имя папки должно совпадать со значением поля <code>id</code> мода.</p>
 <p>Схема: <a href="../../../schemas/manifest.schema.json">manifest.schema.json</a></p>
 <h2 id="example">Пример<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
@@ -832,19 +1042,19 @@
 <td><code>formatVersion</code></td>
 <td>целое число</td>
 <td>да</td>
-<td><code>1</code>.</td>
+<td><code>1</code> или <code>2</code> для манифеста со звуками (см. раздел <a href="#version-2">Версия 2</a>).</td>
 </tr>
 <tr>
 <td><code>gameVersion</code></td>
 <td>строка</td>
 <td>нет</td>
-<td>Минимальная версия игры, необходимая моду: <code>"0.6.1"</code> или <code>"&gt;=0.6.1"</code>. Игра сравнивает её со своей версией. Если не указывать поле или записать нечитаемое значение, игра его не проверяет.</td>
+<td>Самая ранняя версия игры, необходимая моду: <code>"0.6.1"</code> или <code>"&gt;=0.6.1"</code>. Игра сравнивает её со своей версией. Если не указывать это поле или записать значение, которое игра не может прочитать, проверка не выполняется.</td>
 </tr>
 <tr>
 <td><code>id</code></td>
 <td>строка</td>
 <td>да</td>
-<td>Идентификатор мода. Он должен совпадать с именем папки. Шаблон <code>^[a-z][a-z0-9_]{2,40}$</code>.</td>
+<td>Идентификатор мода. Он должен совпадать с именем папки. Шаблон: <code>^[a-z][a-z0-9_]{2,40}$</code>.</td>
 </tr>
 <tr>
 <td><code>version</code></td>
@@ -856,25 +1066,43 @@
 <td><code>name</code></td>
 <td>объект</td>
 <td>да</td>
-<td>Название мода для каждого языка: ключи — двухбуквенные коды, например <code>"en"</code>, <code>"it"</code>, <code>"fr"</code>, <code>"es"</code>, <code>"de"</code>; значения — тексты. Нужна хотя бы одна запись.</td>
+<td>Название мода для разных языков: ключи — двухбуквенные коды, например <code>"en"</code>, <code>"it"</code>, <code>"fr"</code>, <code>"es"</code>, <code>"de"</code>; значения — текст. Нужна хотя бы одна запись.</td>
 </tr>
 <tr>
 <td><code>description</code></td>
 <td>объект</td>
 <td>нет</td>
-<td>Описание мода для каждого языка в том же формате, что и <code>name</code>.</td>
+<td>Описание мода для разных языков в той же структуре, что и <code>name</code>.</td>
 </tr>
 <tr>
 <td><code>authors</code></td>
 <td>массив строк</td>
 <td>нет</td>
-<td>Авторы. На странице «Моды» их имена разделяются запятыми.</td>
+<td>Авторы. На странице «Моды» их имена разделены запятыми.</td>
 </tr>
 <tr>
 <td><code>type</code></td>
 <td>строка</td>
 <td>да</td>
 <td><code>model</code>, <code>livery</code>, <code>layout</code>, <code>scenario</code>, <code>language</code> или <code>pack</code>.</td>
+</tr>
+<tr>
+<td><code>requires</code></td>
+<td>массив строк</td>
+<td>версия 2</td>
+<td>Возможности, необходимые моду.</td>
+</tr>
+<tr>
+<td><code>assets</code></td>
+<td>массив</td>
+<td>версия 2</td>
+<td>Файлы, объявленные модом.</td>
+</tr>
+<tr>
+<td><code>audioBindings</code></td>
+<td>массив</td>
+<td>версия 2</td>
+<td>Звуки, заменяющие исходные звуки игры.</td>
 </tr>
 </tbody>
 </table>
@@ -892,6 +1120,70 @@
 <li>Если манифест нельзя прочитать или в нём отсутствует <code>id</code>, <code>version</code>, <code>name</code> либо допустимое значение <code>type</code>, появляется предупреждение <strong>Недопустимый файл: mod.json</strong>.</li>
 <li>Допускается папка без <code>mod.json</code>: игра читает её как <code>pack</code> с именем папки. В этом случае имя папки должно быть допустимым идентификатором; иначе появляется предупреждение <strong>mod.json отсутствует или недопустим</strong>.</li>
 <li>Если у двух модов одинаковый идентификатор, игра оставляет первый найденный.</li>
+</ul>
+<h2 id="version-2">Версия 2<a class="headerlink" href="#version-2" title="Permanent link">&para;</a></h2>
+<p>Манифест с <code>"formatVersion": 2</code> может объявлять файлы, отличные от JSON. В этой версии игры это звуки; см. раздел <a href="../../assets/audio/">Звуки</a>. Все правила версии 1 продолжают действовать, а набор версии 2 может содержать файлы любого из пяти типов JSON.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"car-line-tycoon.mod"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"formatVersion"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"gameVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&gt;=0.6.4"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"harbour_audio"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Harbour Audio"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pack"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"requires"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"assets.audio.v1"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"research_bell"</span><span class="p">,</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"audio"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"audio/research_bell.wav"</span><span class="p">,</span><span class="w"> </span><span class="nt">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CC0-1.0"</span><span class="p">,</span><span class="w"> </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Author"</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"audioBindings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"cue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"research"</span><span class="p">,</span><span class="w"> </span><span class="nt">"asset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"research_bell"</span><span class="p">,</span><span class="w"> </span><span class="nt">"gainDb"</span><span class="p">:</span><span class="w"> </span><span class="mi">-3</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Обязательно</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gameVersion</code></td>
+<td>строка</td>
+<td>да</td>
+<td>В версии 2 поле обязательно, а его значение должно быть читаемым; укажите <code>"0.6.4"</code> или <code>"&gt;=0.6.4"</code>. Значение, которое игра не может прочитать, делает манифест недопустимым.</td>
+</tr>
+<tr>
+<td><code>requires</code></td>
+<td>массив строк</td>
+<td>при наличии <code>assets</code></td>
+<td>Необходимые моду возможности. В этой версии игры доступна возможность <code>assets.audio.v1</code>. Если мод требует неизвестную игре возможность, он отключается целиком, а в его строке указывается эта возможность.</td>
+</tr>
+<tr>
+<td><code>assets</code></td>
+<td>массив</td>
+<td>нет</td>
+<td>До 64 записей с полями <code>id</code>, <code>kind</code> (<code>audio</code>), <code>path</code>, <code>license</code> и <code>author</code>; поле <code>licenseFile</code> необязательно.</td>
+</tr>
+<tr>
+<td><code>audioBindings</code></td>
+<td>массив</td>
+<td>нет</td>
+<td>До 2 записей с полем <code>cue</code> (<code>confirm</code> или <code>research</code>), <code>asset</code> (идентификатор ресурса этого же мода) и <code>gainDb</code> (от -24 до 0, по умолчанию 0).</td>
+</tr>
+</tbody>
+</table>
+<p>Правила версии 2:</p>
+<ul>
+<li>Размер манифеста — до 256 КиБ, глубина вложенности — до 16 уровней, длина каждой строки — до 4096 символов; каждое свойство указывается один раз.</li>
+<li>Для мода с <code>assets</code> поле <code>type</code> имеет значение <code>pack</code>.</li>
+<li>Игра вычисляет хеш SHA-256 манифеста, файлов JSON и всех объявленных файлов. Хеш, указанный в манифесте, не читается.</li>
+<li>Одна ошибка в объявленном файле отключает весь мод; игра не загружает часть набора.</li>
+<li>Для манифеста версии 2 в более старой версии игры появляется сообщение <strong>Требуется более новая версия игры</strong>, и ни одна часть мода не используется.</li>
+<li>Неизвестные игре поля игнорируются, как в версии 1. Исключение — неизвестная игре возможность из <code>requires</code>: в этом случае мод отключается.</li>
 </ul>
 
 

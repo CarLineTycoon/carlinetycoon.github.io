@@ -605,6 +605,28 @@
   
   
     <li class="md-nav__item">
+      <a href="assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sounds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="examples/" class="md-nav__link">
         
   
@@ -616,6 +638,171 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    State and RNG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limits and errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -793,6 +980,11 @@
 <td>Texts in another language</td>
 <td><strong>Options</strong> → <strong>Language</strong> (development builds for now)</td>
 </tr>
+<tr>
+<td><a href="assets/audio/">Sounds</a></td>
+<td>Your own sounds for the confirm and research signals</td>
+<td>Wherever the game plays the signal; <strong>Listen</strong> on the Mods page</td>
+</tr>
 </tbody>
 </table>
 <p>A mod can hold one type of file, or several types at once as a <strong>pack</strong>.</p>
@@ -805,7 +997,7 @@
 <h2 id="good-to-know">Good to know<a class="headerlink" href="#good-to-know" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Mods add content. They never replace the game's own files, so the order of your mods does not matter.</li>
-<li>Mods contain data only: no 3D models, no textures and no code. Every part, colour and object comes from the game's own catalogue.</li>
+<li>Mods contain data only: JSON files and sound files. There are no 3D models, no textures and no code yet. Every part, colour and object comes from the game's own catalogue.</li>
 <li>Every format has a <a href="formats/#json-schemas">JSON Schema</a>. Point your editor at it and you get completion and error checking while you type.</li>
 <li>This documentation follows the current version of the game. The <a href="changelog/">changelog</a> lists what changed for modders in each version.</li>
 </ul>

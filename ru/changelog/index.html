@@ -538,6 +538,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Звуки
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../examples/" class="md-nav__link">
         
   
@@ -549,6 +571,171 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Начало работы
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Состояние и ГСЧ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ограничения и ошибки
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    История изменений API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -630,6 +817,15 @@
       Содержание
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v0-6-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.6.4
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#v0-6-3" class="md-nav__link">
@@ -724,6 +920,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#v0-6-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.6.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v0-6-3" class="md-nav__link">
     <span class="md-ellipsis">
       0.6.3
@@ -776,7 +981,18 @@
 
 
 <h1 id="changelog">История изменений<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
-<p>Что менялось для моддеров в каждой версии игры. У всех форматов файлов значение <code>formatVersion</code> по-прежнему равно 1.</p>
+<p>Что изменилось для моддеров в каждой версии игры. У пяти форматов файлов с содержимым значение <code>formatVersion</code> равно 1; манифест может иметь версию 1 или 2.</p>
+<h2 id="v0-6-4">0.6.4<a class="headerlink" href="#v0-6-4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Версия манифеста 2:</strong> объявляет <code>requires</code>, <code>assets</code> и <code>audioBindings</code>. Пять форматов файлов с содержимым и манифест версии 1 читаются как прежде. Игра, поддерживающая только версию 1, показывает <strong>Требуется более новая версия игры</strong> для манифеста версии 2.</li>
+<li><strong>Звуки:</strong> мод может заменять сигналы <strong>confirm</strong> и <strong>research</strong> файлами WAV или OGG Vorbis. См. раздел <a href="../assets/audio/">Звуки</a>.</li>
+<li><strong>Страница «Моды»:</strong> кнопка <strong>Прослушать</strong> для каждого звука мода, список <strong>Подробности</strong> с не более чем 20 ошибками и примечаниями, а также предупреждения о неизвестной возможности, совпадающем сигнале и повторяющемся идентификаторе.</li>
+<li><strong>Сохранения:</strong> запись о модах в сохранении хранит моды, которые были активны ранее, поэтому игра, в которой использовался мод, остаётся отмеченной и после его удаления.</li>
+<li><strong>Два примера модов</strong> со звуком: <code>example_audio</code> и <code>example_audio_ogg</code>.</li>
+<li><strong>Скрипты Lua появятся позже:</strong> <a href="../lua/getting-started/">страницы Lua</a> описывают <code>lua.v1</code> до его выпуска. Релизная версия игры пока не запускает скрипты Lua. Мод со скриптом целиком остаётся выключенным, включая звуки; его строка на странице «Моды» сообщает <strong>Скрипты Lua недоступны в этой версии.</strong> Сборки для разработки запускают скрипты для тестирования.</li>
+<li><strong>Дерево исследований:</strong> реорганизовано. Материал <code>plate</code> можно покупать начиная с исследования <code>process_1</code>, ещё до военных исследований; 148 исправлений размещают рецепты, детали и параметры после необходимых им постов и уровней оборудования. Сверьте <code>completedResearch</code> сценариев и объекты планировок со <a href="../reference/values/">списком допустимых значений</a>.</li>
+<li><strong>Производственная линия:</strong> теперь автомобиль проходит её в таком порядке: рама, кузов с колёсами, двигатель, затем передняя часть, специальные посты, покраска и контроль качества. Форматы файлов и идентификаторы объектов остались прежними.</li>
+</ul>
 <h2 id="v0-6-3">0.6.3<a class="headerlink" href="#v0-6-3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Форматы файлов и страница «Моды» не менялись.</li>

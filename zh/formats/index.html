@@ -618,6 +618,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    声音
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../examples/" class="md-nav__link">
         
   
@@ -629,6 +651,171 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    入门指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    状态与随机数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    限制与错误
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API 更新日志
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -848,28 +1035,28 @@
 <tr>
 <td><code>format</code></td>
 <td>字符串</td>
-<td>格式 ID，见上表。其他值会导致文件被拒绝。</td>
+<td>上表中的格式 ID。其他值会导致文件被拒绝。</td>
 </tr>
 <tr>
 <td><code>formatVersion</code></td>
 <td>整数</td>
-<td><code>1</code>。更高的数字会导致文件被拒绝，并显示<strong>需要更新的游戏版本</strong>警告。</td>
+<td>五种内容格式使用 <code>1</code>。清单文件可以使用 <code>2</code>（参见<a href="manifest/#version-2">清单文件</a>）。更高的数字会导致文件被拒绝，并显示<strong>需要更新的游戏版本</strong>。</td>
 </tr>
 <tr>
 <td><code>gameVersion</code></td>
 <td>字符串</td>
-<td>生成文件的游戏版本，例如 <code>"0.6.2"</code>。内容文件：仅供参考。清单文件：模组所需的最低游戏版本。</td>
+<td>生成文件时的游戏版本，例如 <code>"0.6.2"</code>。内容文件：仅供参考。清单文件：模组所需的最低游戏版本。</td>
 </tr>
 </tbody>
 </table>
 <h2 id="rules">通用文件规则<a class="headerlink" href="#rules" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>编码。</strong>文件应以 UTF-8 编码保存。文件开头可以带字节顺序标记。</li>
+<li><strong>编码。</strong>使用 UTF-8 保存文件。文件开头可以带字节顺序标记。</li>
 <li><strong>大小。</strong>文件最大为 2 MB，语言文件最大为 8 MB。超出限制会显示<strong>文件过大</strong>警告。</li>
 <li><strong>类型。</strong>数字应使用普通 JSON 数字（<code>4</code>），文本应使用 JSON 字符串（<code>"Harbour Blue"</code>）。值的类型错误（例如数字字段填写单词）会导致文件无效。</li>
 <li><strong>未知字段。</strong>游戏会忽略不认识的字段，包括顶层字段和列表中的字段。</li>
 <li><strong>ID。</strong><code>id</code>使用小写字母 <code>a</code>–<code>z</code>、数字和下划线，以字母开头，长度为 3 至 41 个字符：<code>^[a-z][a-z0-9_]{2,40}$</code>。</li>
-<li><strong>仅含数据。</strong>任何格式都不包含网格、纹理或脚本。部件、颜色、徽章和对象从游戏自带内容中选择；<a href="../reference/values/">允许的值</a>页面列出了这些内容。</li>
+<li><strong>仅含数据。</strong>任何格式都不包含网格、纹理或脚本。部件、颜色、徽章和对象从游戏自带内容中选择；<a href="../reference/values/">允许的值</a>页面列出了这些内容。声音文件是唯一的二进制文件类型，且仅限版本 2 清单文件声明时使用（<a href="../assets/audio/">声音</a>）。</li>
 </ul>
 <h2 id="checks">游戏何时检查文件<a class="headerlink" href="#checks" title="Permanent link">&para;</a></h2>
 <p>游戏会检查文件两次。</p>

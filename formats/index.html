@@ -618,6 +618,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sounds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../examples/" class="md-nav__link">
         
   
@@ -629,6 +651,171 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    State and RNG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limits and errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -853,7 +1040,7 @@
 <tr>
 <td><code>formatVersion</code></td>
 <td>integer</td>
-<td><code>1</code>. A higher number is refused with <strong>Requires a newer game version</strong>.</td>
+<td><code>1</code> for the five content formats. The manifest may use <code>2</code> (<a href="manifest/#version-2">Manifest</a>). A higher number is refused with <strong>Requires a newer game version</strong>.</td>
 </tr>
 <tr>
 <td><code>gameVersion</code></td>
@@ -869,7 +1056,7 @@
 <li><strong>Types.</strong> Write numbers as plain JSON numbers (<code>4</code>) and texts as JSON strings (<code>"Harbour Blue"</code>). A value of the wrong kind, such as a word where a number belongs, makes the file invalid.</li>
 <li><strong>Unknown fields.</strong> The game ignores fields it does not know, at the top level and inside lists.</li>
 <li><strong>Ids.</strong> An <code>id</code> uses lower-case letters <code>a</code>–<code>z</code>, digits and underscores, starts with a letter and is 3 to 41 characters long: <code>^[a-z][a-z0-9_]{2,40}$</code>.</li>
-<li><strong>Data only.</strong> No format carries a mesh, a texture or a script. Parts, colours, emblems and objects are chosen among the game's own; the <a href="../reference/values/">allowed values</a> page lists them.</li>
+<li><strong>Data only.</strong> No format carries a mesh, a texture or a script. Parts, colours, emblems and objects are chosen among the game's own; the <a href="../reference/values/">allowed values</a> page lists them. Sound files are the one kind of binary file, and only when a version 2 manifest declares them (<a href="../assets/audio/">Sounds</a>).</li>
 </ul>
 <h2 id="checks">When the game checks a file<a class="headerlink" href="#checks" title="Permanent link">&para;</a></h2>
 <p>The game checks a file twice.</p>

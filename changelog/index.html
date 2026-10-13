@@ -538,6 +538,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sounds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../examples/" class="md-nav__link">
         
   
@@ -549,6 +571,171 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    State and RNG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limits and errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -630,6 +817,15 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v0-6-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.6.4
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#v0-6-3" class="md-nav__link">
@@ -724,6 +920,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#v0-6-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      0.6.4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v0-6-3" class="md-nav__link">
     <span class="md-ellipsis">
       0.6.3
@@ -776,7 +981,18 @@
 
 
 <h1 id="changelog">Changelog<a class="headerlink" href="#changelog" title="Permanent link">&para;</a></h1>
-<p>What changed for modders in each version of the game. Every file format is still at <code>formatVersion</code> 1.</p>
+<p>What changed for modders in each version of the game. The five content formats are at <code>formatVersion</code> 1; the manifest can be at version 1 or 2.</p>
+<h2 id="v0-6-4">0.6.4<a class="headerlink" href="#v0-6-4" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>Manifest version 2:</strong> declares <code>requires</code>, <code>assets</code> and <code>audioBindings</code>. The five content formats and manifest version 1 are read as before. A game that knows only version 1 shows <strong>Requires a newer game version</strong> for a version 2 manifest.</li>
+<li><strong>Sounds:</strong> a mod can replace the <strong>confirm</strong> and <strong>research</strong> signals with WAV or OGG Vorbis files. See <a href="../assets/audio/">Sounds</a>.</li>
+<li><strong>Mods page:</strong> a <strong>Listen</strong> button for each sound of a mod, a <strong>Details</strong> list with up to 20 errors and notes, and warnings for an unknown capability, a shared signal and a duplicate id.</li>
+<li><strong>Saves:</strong> the record of mods in a save keeps the mods that were active earlier, so a game played with a mod stays marked after the mod is removed.</li>
+<li><strong>Two example mods</strong> with a sound: <code>example_audio</code> and <code>example_audio_ogg</code>.</li>
+<li><strong>Lua scripting is coming:</strong> the <a href="../lua/getting-started/">Lua pages</a> describe <code>lua.v1</code> ahead of its release. The released game does not run Lua scripts yet. A mod with a script stays off as a whole, sounds included, and its row on the Mods page says <strong>Lua scripts are unavailable in this version.</strong> Development builds of the game run scripts for testing.</li>
+<li><strong>Research tree:</strong> reorganised. The <code>plate</code> material can be bought from the <code>process_1</code> research on, before the military research, and 148 fixes put recipes, parts and options after the stations and machine levels they need. Check the <code>completedResearch</code> of your scenarios and the objects of your layouts against the <a href="../reference/values/">allowed values</a>.</li>
+<li><strong>Production line:</strong> a car now goes through the line in this order: frame, body with wheels, engine and then front, special stations, paint, quality check. The file formats and the object ids stay the same.</li>
+</ul>
 <h2 id="v0-6-3">0.6.3<a class="headerlink" href="#v0-6-3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>No changes to the file formats or to the Mods page.</li>

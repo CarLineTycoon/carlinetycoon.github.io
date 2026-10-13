@@ -1,0 +1,303 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://carlinetycoon.github.io/schemas/manifestv2.schema.json",
+  "title": "Car Line Tycoon mod manifest (mod.json)",
+  "description": "The manifest of a mod folder. The folder's name must be the mod's id.",
+  "type": "object",
+  "properties": {
+    "format": {
+      "description": "The kind of file. Always this value.",
+      "const": "car-line-tycoon.mod"
+    },
+    "formatVersion": {
+      "type": "integer",
+      "const": 2
+    },
+    "gameVersion": {
+      "description": "The oldest game version the mod needs, as \"0.6.0\" or \">=0.6.0\". A newer version than the game's turns the mod off with a warning.",
+      "type": "string",
+      "pattern": "^\\s*(>=)?\\s*[0-9]+(\\.[0-9]+){1,3}\\s*$"
+    },
+    "id": {
+      "description": "The mod's id: the same text as the folder's name.",
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9_]{2,40}$"
+    },
+    "version": {
+      "description": "The mod's own version, shown on the Mods page.",
+      "type": "string",
+      "minLength": 1
+    },
+    "name": {
+      "description": "The mod's name per language, by two-letter code (\"en\", \"it\", ...). English is the fallback.",
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "description": {
+      "description": "The mod's description per language, by two-letter code.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "authors": {
+      "description": "The authors, shown on the Mods page.",
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "type": {
+      "description": "What the mod holds. A mod of one type reads only files of that type; a pack reads all five. A mod with `assets` is a pack.",
+      "type": "string",
+      "enum": [
+        "model",
+        "livery",
+        "layout",
+        "scenario",
+        "language",
+        "pack"
+      ]
+    },
+    "requires": {
+      "description": "Version 2 only. The capabilities the game must have for the mod to work. A capability the game does not know turns the whole mod off.",
+      "type": "array",
+      "items": {
+        "description": "A capability id.",
+        "type": "string",
+        "enum": [
+          "assets.audio.v1",
+          "lua.v1"
+        ]
+      }
+    },
+    "assets": {
+      "description": "Version 2 only. The files of the mod that are not JSON, at most 64.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "description": "The asset's id inside this mod. Bindings refer to it.",
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]{2,40}$"
+          },
+          "kind": {
+            "description": "What the file is.",
+            "type": "string",
+            "enum": [
+              "audio"
+            ]
+          },
+          "path": {
+            "description": "The file's path inside the mod folder: lower-case letters, digits, `_`, `-` and `.`, folders separated by `/`, at most four parts and 128 characters. The extension is `.wav` or `.ogg`.",
+            "type": "string",
+            "pattern": "^[a-z0-9_.-]+(/[a-z0-9_.-]+){0,3}\\.(wav|ogg)$",
+            "maxLength": 128
+          },
+          "license": {
+            "description": "The licence of the file, for example `CC0-1.0`.",
+            "type": "string",
+            "minLength": 1
+          },
+          "author": {
+            "description": "Who made the file.",
+            "type": "string",
+            "minLength": 1
+          },
+          "licenseFile": {
+            "description": "Optional. A UTF-8 text file with the licence, at most 16 KiB.",
+            "type": "string",
+            "pattern": "^[a-z0-9_.-]+(/[a-z0-9_.-]+){0,3}$",
+            "maxLength": 128
+          }
+        },
+        "required": [
+          "id",
+          "kind",
+          "path",
+          "license",
+          "author"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 64
+    },
+    "audioBindings": {
+      "description": "Version 2 only. The sounds that replace the game's own, at most 2, one per signal.",
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "cue": {
+            "description": "The signal to replace.",
+            "type": "string",
+            "enum": [
+              "confirm",
+              "research"
+            ]
+          },
+          "asset": {
+            "description": "The id of an audio asset of this mod.",
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_]{2,40}$"
+          },
+          "gainDb": {
+            "description": "Gain in decibels, -24 to 0. The game lowers a sound that is too loud before it applies the gain.",
+            "type": "number",
+            "minimum": -24,
+            "maximum": 0
+          }
+        },
+        "required": [
+          "cue",
+          "asset"
+        ]
+      },
+      "minItems": 1,
+      "maxItems": 2
+    },
+    "script": {
+      "type": "object",
+      "properties": {
+        "apiVersion": {
+          "type": "integer",
+          "const": 1
+        },
+        "stateVersion": {
+          "type": "integer",
+          "const": 1
+        },
+        "entry": {
+          "type": "string",
+          "pattern": "^[a-z0-9_.-]+(/[a-z0-9_.-]+){0,3}\\.lua$",
+          "maxLength": 128
+        },
+        "events": {
+          "description": "Declared Lua handlers.",
+          "type": "array",
+          "items": {
+            "description": "An API v1 event.",
+            "type": "string",
+            "enum": [
+              "day_started",
+              "sales_summary"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 2,
+          "uniqueItems": true
+        },
+        "actions": {
+          "description": "Permitted Lua actions.",
+          "type": "array",
+          "items": {
+            "description": "An API v1 action.",
+            "type": "string",
+            "enum": [
+              "set_model_price"
+            ]
+          },
+          "minItems": 0,
+          "maxItems": 1
+        },
+        "license": {
+          "description": "The script's licence.",
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "apiVersion",
+        "stateVersion",
+        "entry",
+        "events",
+        "actions",
+        "license"
+      ]
+    }
+  },
+  "required": [
+    "format",
+    "formatVersion",
+    "id",
+    "version",
+    "name",
+    "type"
+  ],
+  "dependentRequired": {
+    "assets": [
+      "requires"
+    ],
+    "audioBindings": [
+      "assets"
+    ],
+    "script": [
+      "requires"
+    ]
+  },
+  "if": {
+    "properties": {
+      "formatVersion": {
+        "const": 2
+      }
+    },
+    "required": [
+      "formatVersion"
+    ]
+  },
+  "then": {
+    "required": [
+      "gameVersion"
+    ]
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "assets"
+        ]
+      },
+      "then": {
+        "properties": {
+          "formatVersion": {
+            "const": 2
+          },
+          "type": {
+            "const": "pack"
+          },
+          "requires": {
+            "contains": {
+              "const": "assets.audio.v1"
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "script"
+        ]
+      },
+      "then": {
+        "properties": {
+          "formatVersion": {
+            "const": 2
+          },
+          "type": {
+            "const": "pack"
+          },
+          "requires": {
+            "contains": {
+              "const": "lua.v1"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

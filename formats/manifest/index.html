@@ -466,6 +466,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#version-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 2
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -627,6 +636,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Sounds
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../examples/" class="md-nav__link">
         
   
@@ -638,6 +669,171 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Getting started
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    State and RNG
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Limits and errors
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API changelog
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -779,6 +975,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#version-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Version 2
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -796,6 +1001,11 @@
 
 
 <h1 id="manifest">Manifest (mod.json)<a class="headerlink" href="#manifest" title="Permanent link">&para;</a></h1>
+<p>The shared manifest covers data, sounds and scripts. The <a href="../../lua/getting-started/">Lua development guide</a>
+uses version 2 with <code>requires: ["lua.v1"]</code> and one explicit <code>script</code> declaration.
+Audio and Lua can share a pack with both capabilities in <code>requires</code>. The released game does not run Lua scripts yet.
+The <a href="../../schemas/manifestv2.schema.json">version 2 schema</a> is generated from the same
+contract as the <a href="../../schemas/manifest.schema.json">combined schema</a>.</p>
 <p><code>mod.json</code> sits at the top of a mod folder and tells the game what the mod is. The folder name must be the same as the mod's <code>id</code>.</p>
 <p>Schema: <a href="../../schemas/manifest.schema.json">manifest.schema.json</a></p>
 <h2 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
@@ -832,7 +1042,7 @@
 <td><code>formatVersion</code></td>
 <td>integer</td>
 <td>yes</td>
-<td><code>1</code>.</td>
+<td><code>1</code>, or <code>2</code> for a manifest that declares sounds (see <a href="#version-2">Version 2</a>).</td>
 </tr>
 <tr>
 <td><code>gameVersion</code></td>
@@ -876,6 +1086,24 @@
 <td>yes</td>
 <td><code>model</code>, <code>livery</code>, <code>layout</code>, <code>scenario</code>, <code>language</code> or <code>pack</code>.</td>
 </tr>
+<tr>
+<td><code>requires</code></td>
+<td>array of strings</td>
+<td>version 2</td>
+<td>The capabilities the mod needs.</td>
+</tr>
+<tr>
+<td><code>assets</code></td>
+<td>array</td>
+<td>version 2</td>
+<td>The files the mod declares.</td>
+</tr>
+<tr>
+<td><code>audioBindings</code></td>
+<td>array</td>
+<td>version 2</td>
+<td>The sounds that replace the game's own.</td>
+</tr>
 </tbody>
 </table>
 <h2 id="type">How the type works<a class="headerlink" href="#type" title="Permanent link">&para;</a></h2>
@@ -892,6 +1120,70 @@
 <li>When a manifest cannot be read, or misses <code>id</code>, <code>version</code>, <code>name</code> or a valid <code>type</code>, the mod gets the warning <strong>Invalid file: mod.json</strong>.</li>
 <li>A folder without <code>mod.json</code> works too: the game reads it as a <code>pack</code> named after the folder. Its folder name must then be a valid id, otherwise the warning is <strong>mod.json is missing or invalid</strong>.</li>
 <li>When two mods have the same id, the game keeps the first one it finds.</li>
+</ul>
+<h2 id="version-2">Version 2<a class="headerlink" href="#version-2" title="Permanent link">&para;</a></h2>
+<p>A manifest with <code>"formatVersion": 2</code> can declare files that are not JSON. In this version of the game they are sounds; see <a href="../../assets/audio/">Sounds</a>. Everything of version 1 still applies, and a version 2 pack may hold any of the five JSON file types.</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"car-line-tycoon.mod"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"formatVersion"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"gameVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&gt;=0.6.4"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"harbour_audio"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Harbour Audio"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pack"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"requires"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"assets.audio.v1"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"research_bell"</span><span class="p">,</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"audio"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"audio/research_bell.wav"</span><span class="p">,</span><span class="w"> </span><span class="nt">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CC0-1.0"</span><span class="p">,</span><span class="w"> </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Author"</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"audioBindings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"cue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"research"</span><span class="p">,</span><span class="w"> </span><span class="nt">"asset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"research_bell"</span><span class="p">,</span><span class="w"> </span><span class="nt">"gainDb"</span><span class="p">:</span><span class="w"> </span><span class="mi">-3</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gameVersion</code></td>
+<td>string</td>
+<td>yes</td>
+<td>Required and readable in version 2, written as <code>"0.6.4"</code> or <code>"&gt;=0.6.4"</code>. A value the game cannot read makes the manifest invalid.</td>
+</tr>
+<tr>
+<td><code>requires</code></td>
+<td>array of strings</td>
+<td>with <code>assets</code></td>
+<td>The capabilities the mod needs. This version of the game has <code>assets.audio.v1</code>. A mod that requires a capability the game does not know is switched off as a whole, and its row names the capability.</td>
+</tr>
+<tr>
+<td><code>assets</code></td>
+<td>array</td>
+<td>no</td>
+<td>Up to 64 records with <code>id</code>, <code>kind</code> (<code>audio</code>), <code>path</code>, <code>license</code> and <code>author</code>; <code>licenseFile</code> is optional.</td>
+</tr>
+<tr>
+<td><code>audioBindings</code></td>
+<td>array</td>
+<td>no</td>
+<td>Up to 2 records with <code>cue</code> (<code>confirm</code> or <code>research</code>), <code>asset</code> (an asset id of the same mod) and <code>gainDb</code> (-24 to 0, default 0).</td>
+</tr>
+</tbody>
+</table>
+<p>Rules of version 2:</p>
+<ul>
+<li>The manifest is at most 256 KiB, nested at most 16 levels, with no text over 4096 characters and no property written twice.</li>
+<li>A mod with <code>assets</code> has the <code>type</code> <code>pack</code>.</li>
+<li>The game computes a SHA-256 hash of the manifest, the JSON files and every declared file. A hash you write in the manifest is not read.</li>
+<li>One error in a declared file switches the whole mod off; the game never loads half of a pack.</li>
+<li>A game older than this version shows <strong>Requires a newer game version</strong> for a version 2 manifest and does not use any part of the mod.</li>
+<li>Fields the game does not know are ignored, as in version 1. A capability in <code>requires</code> that the game does not know is the exception: it switches the mod off.</li>
 </ul>
 
 

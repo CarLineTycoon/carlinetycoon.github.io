@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>https://carlinetycoon.github.io/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/"/>
@@ -10,7 +10,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/changelog/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/changelog/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/changelog/"/>
@@ -18,7 +18,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/examples/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/examples/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/examples/"/>
@@ -26,7 +26,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/getting-started/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/getting-started/"/>
@@ -34,7 +34,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/planned/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/planned/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/planned/"/>
@@ -42,15 +42,23 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/troubleshooting/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/troubleshooting/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/troubleshooting/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/troubleshooting/"/>
     </url>
     <url>
+        <loc>https://carlinetycoon.github.io/assets/audio/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/assets/audio/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/assets/audio/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/assets/audio/"/>
+    </url>
+    <url>
         <loc>https://carlinetycoon.github.io/formats/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/"/>
@@ -58,7 +66,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/formats/language/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/language/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/language/"/>
@@ -66,7 +74,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/formats/layout/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/layout/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/layout/"/>
@@ -74,7 +82,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/formats/livery/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/livery/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/livery/"/>
@@ -82,7 +90,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/formats/manifest/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/manifest/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/manifest/"/>
@@ -90,7 +98,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/formats/model/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/model/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/model/"/>
@@ -98,15 +106,55 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/formats/scenario/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/scenario/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/scenario/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/formats/scenario/"/>
     </url>
     <url>
+        <loc>https://carlinetycoon.github.io/lua/api-changelog/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/api-changelog/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/api-changelog/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/api-changelog/"/>
+    </url>
+    <url>
+        <loc>https://carlinetycoon.github.io/lua/api-v1/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/api-v1/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/api-v1/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/api-v1/"/>
+    </url>
+    <url>
+        <loc>https://carlinetycoon.github.io/lua/getting-started/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://carlinetycoon.github.io/lua/limits-and-errors/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/limits-and-errors/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/limits-and-errors/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/limits-and-errors/"/>
+    </url>
+    <url>
+        <loc>https://carlinetycoon.github.io/lua/state-and-rng/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/state-and-rng/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/state-and-rng/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/state-and-rng/"/>
+    </url>
+    <url>
         <loc>https://carlinetycoon.github.io/reference/values/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/reference/values/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/reference/values/"/>
@@ -114,7 +162,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/ru/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/"/>
@@ -122,7 +170,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/ru/changelog/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/changelog/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/changelog/"/>
@@ -130,7 +178,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/ru/examples/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/examples/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/examples/"/>
@@ -138,7 +186,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/ru/getting-started/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/getting-started/"/>
@@ -146,7 +194,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/ru/planned/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/planned/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/planned/"/>
@@ -154,15 +202,23 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/ru/troubleshooting/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/troubleshooting/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/troubleshooting/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/troubleshooting/"/>
     </url>
     <url>
+        <loc>https://carlinetycoon.github.io/ru/assets/audio/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/assets/audio/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/assets/audio/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/assets/audio/"/>
+    </url>
+    <url>
         <loc>https://carlinetycoon.github.io/ru/formats/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/"/>
@@ -170,7 +226,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/ru/formats/language/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/language/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/language/"/>
@@ -178,7 +234,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/ru/formats/layout/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/layout/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/layout/"/>
@@ -186,7 +242,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/ru/formats/livery/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/livery/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/livery/"/>
@@ -194,7 +250,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/ru/formats/manifest/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/manifest/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/manifest/"/>
@@ -202,7 +258,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/ru/formats/model/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/model/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/model/"/>
@@ -210,15 +266,55 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/ru/formats/scenario/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/scenario/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/scenario/"/>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/formats/scenario/"/>
     </url>
     <url>
+        <loc>https://carlinetycoon.github.io/ru/lua/api-changelog/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/api-changelog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/api-changelog/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/api-changelog/"/>
+    </url>
+    <url>
+        <loc>https://carlinetycoon.github.io/ru/lua/api-v1/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/api-v1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/api-v1/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/api-v1/"/>
+    </url>
+    <url>
+        <loc>https://carlinetycoon.github.io/ru/lua/getting-started/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://carlinetycoon.github.io/ru/lua/limits-and-errors/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/limits-and-errors/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/limits-and-errors/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/limits-and-errors/"/>
+    </url>
+    <url>
+        <loc>https://carlinetycoon.github.io/ru/lua/state-and-rng/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/state-and-rng/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/state-and-rng/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/state-and-rng/"/>
+    </url>
+    <url>
         <loc>https://carlinetycoon.github.io/ru/reference/values/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/reference/values/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/reference/values/"/>
@@ -226,7 +322,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/zh/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/"/>
@@ -234,7 +330,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/zh/changelog/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/changelog/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/changelog/"/>
@@ -242,7 +338,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/zh/examples/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/examples/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/examples/"/>
@@ -250,7 +346,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/zh/getting-started/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/getting-started/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/getting-started/"/>
@@ -258,7 +354,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/zh/planned/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/planned/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/planned/"/>
@@ -266,15 +362,23 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/zh/troubleshooting/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/troubleshooting/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/troubleshooting/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/troubleshooting/"/>
     </url>
     <url>
+        <loc>https://carlinetycoon.github.io/zh/assets/audio/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/assets/audio/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/assets/audio/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/assets/audio/"/>
+    </url>
+    <url>
         <loc>https://carlinetycoon.github.io/zh/formats/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/formats/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/"/>
@@ -282,7 +386,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/zh/formats/language/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/formats/language/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/language/"/>
@@ -290,7 +394,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/zh/formats/layout/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/formats/layout/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/layout/"/>
@@ -298,7 +402,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/zh/formats/livery/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/formats/livery/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/livery/"/>
@@ -306,7 +410,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/zh/formats/manifest/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/formats/manifest/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/manifest/"/>
@@ -314,7 +418,7 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/zh/formats/model/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/formats/model/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/model/"/>
@@ -322,15 +426,55 @@
     </url>
     <url>
         <loc>https://carlinetycoon.github.io/zh/formats/scenario/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/formats/scenario/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/formats/scenario/"/>
         <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/formats/scenario/"/>
     </url>
     <url>
+        <loc>https://carlinetycoon.github.io/zh/lua/api-changelog/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/api-changelog/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/api-changelog/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/api-changelog/"/>
+    </url>
+    <url>
+        <loc>https://carlinetycoon.github.io/zh/lua/api-v1/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/api-v1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/api-v1/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/api-v1/"/>
+    </url>
+    <url>
+        <loc>https://carlinetycoon.github.io/zh/lua/getting-started/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/getting-started/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/getting-started/"/>
+    </url>
+    <url>
+        <loc>https://carlinetycoon.github.io/zh/lua/limits-and-errors/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/limits-and-errors/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/limits-and-errors/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/limits-and-errors/"/>
+    </url>
+    <url>
+        <loc>https://carlinetycoon.github.io/zh/lua/state-and-rng/</loc>
+        <lastmod>2026-10-13</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/lua/state-and-rng/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/lua/state-and-rng/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://carlinetycoon.github.io/ru/lua/state-and-rng/"/>
+    </url>
+    <url>
         <loc>https://carlinetycoon.github.io/zh/reference/values/</loc>
-        <lastmod>2026-10-12</lastmod>
+        <lastmod>2026-10-13</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://carlinetycoon.github.io/zh/reference/values/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://carlinetycoon.github.io/reference/values/"/>

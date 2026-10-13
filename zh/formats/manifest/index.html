@@ -466,6 +466,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#version-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      版本 2
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -627,6 +636,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    声音
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../examples/" class="md-nav__link">
         
   
@@ -638,6 +669,171 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    入门指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    状态与随机数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    限制与错误
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API 更新日志
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -779,6 +975,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#version-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      版本 2
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -796,6 +1001,11 @@
 
 
 <h1 id="manifest">清单文件（mod.json）<a class="headerlink" href="#manifest" title="Permanent link">&para;</a></h1>
+<p>通用清单文件涵盖数据、声音和脚本。<a href="../../lua/getting-started/">Lua 开发指南</a>
+使用版本 2，并包含 <code>requires: ["lua.v1"]</code> 和一项明确的 <code>script</code> 声明。
+音频与 Lua 可以共用一个合集，并在 <code>requires</code> 中声明这两项功能。正式版游戏目前无法运行 Lua 脚本。
+<a href="../../../schemas/manifestv2.schema.json">版本 2 架构</a>根据与<a href="../../../schemas/manifest.schema.json">合并架构</a>相同的
+规范生成。</p>
 <p><code>mod.json</code>位于模组文件夹顶层，用于告知游戏该模组的信息。文件夹名称必须与模组的 <code>id</code> 相同。</p>
 <p>架构：<a href="../../../schemas/manifest.schema.json">manifest.schema.json</a></p>
 <h2 id="example">示例<a class="headerlink" href="#example" title="Permanent link">&para;</a></h2>
@@ -817,7 +1027,7 @@
 <tr>
 <th>字段</th>
 <th>类型</th>
-<th>必需</th>
+<th>必填</th>
 <th>说明</th>
 </tr>
 </thead>
@@ -832,49 +1042,67 @@
 <td><code>formatVersion</code></td>
 <td>整数</td>
 <td>是</td>
-<td><code>1</code>。</td>
+<td><code>1</code>；声明声音的清单文件使用 <code>2</code>（参见<a href="#version-2">版本 2</a>）。</td>
 </tr>
 <tr>
 <td><code>gameVersion</code></td>
 <td>字符串</td>
 <td>否</td>
-<td>模组所需的最低游戏版本：<code>"0.6.1"</code> 或 <code>"&gt;=0.6.1"</code>。游戏会与自身版本进行比较。省略该字段，或填写游戏无法读取的值时，游戏不会进行版本检查。</td>
+<td>模组所需的最低游戏版本：<code>"0.6.1"</code> 或 <code>"&gt;=0.6.1"</code>。游戏会将其与当前版本比较。省略该字段或填写游戏无法读取的值时，游戏不会检查此项。</td>
 </tr>
 <tr>
 <td><code>id</code></td>
 <td>字符串</td>
 <td>是</td>
-<td>模组 ID，必须与文件夹名称一致。格式为 <code>^[a-z][a-z0-9_]{2,40}$</code>。</td>
+<td>模组 ID，必须与文件夹名称一致。格式：<code>^[a-z][a-z0-9_]{2,40}$</code>。</td>
 </tr>
 <tr>
 <td><code>version</code></td>
 <td>字符串</td>
 <td>是</td>
-<td>模组版本，在模组页面显示为 <code>v1.2.0</code>。可填写任何非空文本。</td>
+<td>模组版本，会在模组页面显示为 <code>v1.2.0</code>。可以填写任意非空文本。</td>
 </tr>
 <tr>
 <td><code>name</code></td>
 <td>对象</td>
 <td>是</td>
-<td>各语言对应的模组名称：键使用两字母语言代码，例如 <code>"en"</code>、<code>"it"</code>、<code>"fr"</code>、<code>"es"</code>、<code>"de"</code>；值为文本。至少需要一项。</td>
+<td>各语言对应的模组名称：键为双字母代码，例如 <code>"en"</code>、<code>"it"</code>、<code>"fr"</code>、<code>"es"</code>、<code>"de"</code>；值为文本。至少提供一项。</td>
 </tr>
 <tr>
 <td><code>description</code></td>
 <td>对象</td>
 <td>否</td>
-<td>各语言对应的模组说明，结构与 <code>name</code> 相同。</td>
+<td>各语言对应的模组说明，格式与 <code>name</code> 相同。</td>
 </tr>
 <tr>
 <td><code>authors</code></td>
 <td>字符串数组</td>
 <td>否</td>
-<td>作者列表。模组页面会用逗号连接作者姓名。</td>
+<td>作者。模组页面会用逗号连接作者名称。</td>
 </tr>
 <tr>
 <td><code>type</code></td>
 <td>字符串</td>
 <td>是</td>
 <td><code>model</code>、<code>livery</code>、<code>layout</code>、<code>scenario</code>、<code>language</code> 或 <code>pack</code>。</td>
+</tr>
+<tr>
+<td><code>requires</code></td>
+<td>字符串数组</td>
+<td>版本 2</td>
+<td>模组所需的功能。</td>
+</tr>
+<tr>
+<td><code>assets</code></td>
+<td>数组</td>
+<td>版本 2</td>
+<td>模组声明的文件。</td>
+</tr>
+<tr>
+<td><code>audioBindings</code></td>
+<td>数组</td>
+<td>版本 2</td>
+<td>用于替换游戏自带声音的声音。</td>
 </tr>
 </tbody>
 </table>
@@ -892,6 +1120,70 @@
 <li>清单文件无法读取，或缺少 <code>id</code>、<code>version</code>、<code>name</code> 或有效的 <code>type</code> 时，模组会显示警告<strong>无效文件：mod.json</strong>。</li>
 <li>文件夹也可以不包含 <code>mod.json</code>：游戏会将其作为以文件夹命名的 <code>pack</code> 读取。此时，文件夹名称必须符合有效 ID 格式，否则会显示警告<strong>mod.json 缺失或无效</strong>。</li>
 <li>两个模组的 ID 相同时，游戏会保留先找到的模组。</li>
+</ul>
+<h2 id="version-2">版本 2<a class="headerlink" href="#version-2" title="Permanent link">&para;</a></h2>
+<p>带有 <code>"formatVersion": 2</code> 的清单文件可以声明非 JSON 文件。此游戏版本支持声音文件，参见<a href="../../assets/audio/">声音</a>。版本 1 的所有规则仍然适用，版本 2 合集也可以包含五种 JSON 文件格式中的任意格式。</p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">"format"</span><span class="p">:</span><span class="w"> </span><span class="s2">"car-line-tycoon.mod"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"formatVersion"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"gameVersion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&gt;=0.6.4"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"harbour_audio"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.0.0"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"en"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Harbour Audio"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"pack"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"requires"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"assets.audio.v1"</span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"assets"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"research_bell"</span><span class="p">,</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"audio"</span><span class="p">,</span><span class="w"> </span><span class="nt">"path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"audio/research_bell.wav"</span><span class="p">,</span><span class="w"> </span><span class="nt">"license"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CC0-1.0"</span><span class="p">,</span><span class="w"> </span><span class="nt">"author"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Example Author"</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="w">  </span><span class="nt">"audioBindings"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"cue"</span><span class="p">:</span><span class="w"> </span><span class="s2">"research"</span><span class="p">,</span><span class="w"> </span><span class="nt">"asset"</span><span class="p">:</span><span class="w"> </span><span class="s2">"research_bell"</span><span class="p">,</span><span class="w"> </span><span class="nt">"gainDb"</span><span class="p">:</span><span class="w"> </span><span class="mi">-3</span><span class="w"> </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>类型</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>gameVersion</code></td>
+<td>字符串</td>
+<td>是</td>
+<td>版本 2 必须包含此项，且游戏必须能够读取；值为 <code>"0.6.4"</code> 或 <code>"&gt;=0.6.4"</code>。游戏无法读取该值时，清单文件无效。</td>
+</tr>
+<tr>
+<td><code>requires</code></td>
+<td>字符串数组</td>
+<td>有 <code>assets</code> 时必填</td>
+<td>模组所需的功能。此游戏版本支持 <code>assets.audio.v1</code>。模组需要游戏不认识的功能时，整个模组会停用，对应行会指出该功能。</td>
+</tr>
+<tr>
+<td><code>assets</code></td>
+<td>数组</td>
+<td>否</td>
+<td>最多 64 条记录，每条含 <code>id</code>、<code>kind</code>（<code>audio</code>）、<code>path</code>、<code>license</code> 和 <code>author</code>；<code>licenseFile</code> 为可选项。</td>
+</tr>
+<tr>
+<td><code>audioBindings</code></td>
+<td>数组</td>
+<td>否</td>
+<td>最多 2 条记录，每条含 <code>cue</code>（<code>confirm</code> 或 <code>research</code>）、<code>asset</code>（同一模组中的资源 ID）和 <code>gainDb</code>（-24 至 0，默认值为 0）。</td>
+</tr>
+</tbody>
+</table>
+<p>版本 2 的规则：</p>
+<ul>
+<li>清单文件最大为 256 KiB，最多嵌套 16 层，单段文本不超过 4096 个字符，且属性不得重复。</li>
+<li>声明 <code>assets</code> 的模组，其 <code>type</code> 必须为 <code>pack</code>。</li>
+<li>游戏会计算清单文件、JSON 文件和每个已声明文件的 SHA-256 哈希。清单文件中填写的哈希不会被读取。</li>
+<li>已声明文件出现一项错误就会导致整个模组停用；游戏不会只加载合集中的部分内容。</li>
+<li>使用较旧版本的游戏读取版本 2 清单文件时，会显示<strong>需要更新的游戏版本</strong>，并且不会使用模组中的任何内容。</li>
+<li>与版本 1 相同，游戏会忽略无法识别的字段。例外情况是 <code>requires</code> 中包含游戏无法识别的功能，此时模组会停用。</li>
 </ul>
 
 

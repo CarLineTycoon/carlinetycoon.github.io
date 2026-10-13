@@ -605,6 +605,28 @@
   
   
     <li class="md-nav__item">
+      <a href="assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    声音
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="examples/" class="md-nav__link">
         
   
@@ -616,6 +638,171 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    入门指南
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    状态与随机数
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    限制与错误
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API 更新日志
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -764,7 +951,7 @@
 <tr>
 <th>模组类型</th>
 <th>添加内容</th>
-<th>在游戏中的位置</th>
+<th>在游戏中的显示位置</th>
 </tr>
 </thead>
 <tbody>
@@ -775,23 +962,28 @@
 </tr>
 <tr>
 <td><a href="formats/livery/">涂装</a></td>
-<td>涂装方案和漆面效果</td>
+<td>带漆面效果的涂装方案</td>
 <td>设计工作室、<strong>颜色方案</strong>、<strong>导入涂装</strong></td>
 </tr>
 <tr>
 <td><a href="formats/layout/">布局</a></td>
-<td>单层楼的墙壁、区域和对象</td>
+<td>某一楼层的墙、区域和对象</td>
 <td><strong>建造</strong> → <strong>场地</strong>、<strong>导入布局</strong></td>
 </tr>
 <tr>
 <td><a href="formats/scenario/">场景</a></td>
-<td>带有独立目标的自由经营开局</td>
+<td>带有专属目标的自由经营开局</td>
 <td>新游戏 → <strong>自由经营</strong> → <strong>场景</strong></td>
 </tr>
 <tr>
 <td><a href="formats/language/">语言</a></td>
 <td>其他语言的文本</td>
-<td><strong>选项</strong> → <strong>语言</strong>（目前仅开发版）</td>
+<td><strong>选项</strong> → <strong>语言</strong>（目前限开发版）</td>
+</tr>
+<tr>
+<td><a href="assets/audio/">声音</a></td>
+<td>用于确认提示音和研究完成提示音的自定义声音</td>
+<td>游戏播放相应提示音的位置；模组页面上的<strong>试听</strong>按钮</td>
 </tr>
 </tbody>
 </table>
@@ -804,10 +996,10 @@
 </ol>
 <h2 id="good-to-know">实用信息<a class="headerlink" href="#good-to-know" title="Permanent link">&para;</a></h2>
 <ul>
-<li>模组会添加内容。它们不会替换游戏自带文件，因此模组的顺序不会影响结果。</li>
-<li>模组只包含数据：不含 3D 模型、纹理或代码。每个部件、颜色和对象都来自游戏自带目录。</li>
-<li>每种格式都有一个 <a href="formats/#json-schemas">JSON Schema</a>。在编辑器中指定该架构后，输入时即可获得补全和错误检查。</li>
-<li>本文档适用于当前游戏版本。<a href="changelog/">更新日志</a>列出了各版本面向模组作者的变更。</li>
+<li>模组会添加内容。它们不会替换游戏自带文件，因此模组的加载顺序没有影响。</li>
+<li>模组只包含数据：JSON 文件和声音文件。当前没有 3D 模型、纹理或代码。每个部件、颜色和对象都来自游戏自带目录。</li>
+<li>每种格式都有对应的 <a href="formats/#json-schemas">JSON Schema</a>。在编辑器中使用架构后，输入时即可获得自动补全和错误检查。</li>
+<li>本文档对应当前游戏版本。<a href="changelog/">更新日志</a>列出了各版本面向模组作者的变更。</li>
 </ul>
 
 

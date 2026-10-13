@@ -605,6 +605,28 @@
   
   
     <li class="md-nav__item">
+      <a href="assets/audio/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Звуки
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="examples/" class="md-nav__link">
         
   
@@ -616,6 +638,171 @@
   
 
       </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Lua
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Lua
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/getting-started/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Начало работы
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/api-v1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    API v1
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/state-and-rng/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Состояние и ГСЧ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/limits-and-errors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ограничения и ошибки
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lua/api-changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    История изменений API
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -771,12 +958,12 @@
 <tr>
 <td><a href="formats/model/">Модель автомобиля</a></td>
 <td>Проект автомобиля: детали, цвета и цветовые схемы</td>
-<td>Страница <strong>Проекты</strong>, команда <strong>Импортировать модель</strong></td>
+<td>Страница <strong>Проекты</strong>, <strong>Импортировать модель</strong></td>
 </tr>
 <tr>
 <td><a href="formats/livery/">Ливрея</a></td>
 <td>Схема окраски с видами окраски</td>
-<td><strong>Студия проектирования</strong>, <strong>Цветовые схемы</strong>, <strong>Импортировать ливрею</strong></td>
+<td>Студия проектирования, <strong>Цветовые схемы</strong>, <strong>Импортировать ливрею</strong></td>
 </tr>
 <tr>
 <td><a href="formats/layout/">Планировка</a></td>
@@ -786,12 +973,17 @@
 <tr>
 <td><a href="formats/scenario/">Сценарий</a></td>
 <td>Начало свободной игры с собственными целями</td>
-<td>Меню «Новая игра» → <strong>Свободная игра</strong> → <strong>Сценарий</strong></td>
+<td>«Новая игра» → <strong>Свободная игра</strong> → <strong>Сценарий</strong></td>
 </tr>
 <tr>
 <td><a href="formats/language/">Язык</a></td>
 <td>Тексты на другом языке</td>
-<td><strong>Настройки</strong> → <strong>Язык</strong> (пока только в сборках для разработки)</td>
+<td><strong>Настройки</strong> → <strong>Язык</strong> (пока в сборках для разработки)</td>
+</tr>
+<tr>
+<td><a href="assets/audio/">Звуки</a></td>
+<td>Собственные звуки сигналов подтверждения и завершения исследования</td>
+<td>Везде, где игра воспроизводит сигнал; кнопка <strong>Прослушать</strong> на странице «Моды»</td>
 </tr>
 </tbody>
 </table>
@@ -804,10 +996,10 @@
 </ol>
 <h2 id="good-to-know">Полезно знать<a class="headerlink" href="#good-to-know" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Моды добавляют содержимое. Они не заменяют файлы игры, поэтому порядок модов не имеет значения.</li>
-<li>Моды содержат только данные: в них нет 3D-моделей, текстур и кода. Каждая деталь, цвет и объект выбираются из каталога самой игры.</li>
-<li>Для каждого формата есть <a href="formats/#json-schemas">схема JSON</a>. Укажите её в редакторе, чтобы получать подсказки и проверку ошибок при вводе.</li>
-<li>Эта документация соответствует текущей версии игры. В <a href="changelog/">истории изменений</a> перечислены изменения для моддеров в каждой версии.</li>
+<li>Моды добавляют содержимое. Они не заменяют файлы игры, поэтому порядок модов не влияет на результат.</li>
+<li>Моды содержат только данные: файлы JSON и звуковые файлы. 3D-моделей, текстур и кода пока нет. Все детали, цвета и объекты берутся из каталога самой игры.</li>
+<li>Для каждого формата есть <a href="formats/#json-schemas">схема JSON</a>. Укажите её в редакторе, чтобы получать автодополнение и проверку ошибок во время ввода.</li>
+<li>Документация соответствует текущей версии игры. В <a href="changelog/">истории изменений</a> перечислены изменения для моддеров в каждой версии.</li>
 </ul>
 
 
